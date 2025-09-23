@@ -1,27 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import MainLogo from "../../../public/logos/Logo.svg";
 
 export default function Navbar() {
   return (
-    <header className="w-full border-b bg-white shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6 py-3 md:py-1">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              src={MainLogo}
-              alt="Logo"
-              className="h-[40px] w-auto md:h-[80px]"
-              priority
-            />
-          </Link>
-        </div>
+    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-md">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-0 py-3 md:py-1">
+        <Link href="/" className="flex items-center">
+          <Image
+            src={MainLogo}
+            alt="Logo"
+            className="h-[40px] w-auto md:h-[80px]"
+            priority
+          />
+        </Link>
 
         <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
           {[
@@ -33,7 +31,7 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="px-3 py-2 rounded-md transition-colors duration-200 hover:text-[#A10000] hover:font-semibold"
+                className="px-3 py-2 rounded-md transition duration-200 hover:text-[#A10000]"
               >
                 {item.label}
               </Link>
@@ -47,16 +45,17 @@ export default function Navbar() {
           </Button>
         </div>
 
-        <div className="md:hidden flex-1 flex justify-end">
+        <div className="md:hidden flex justify-end">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-md px-2">
+              <Button variant="ghost" size="icon" className="rounded-md p-2">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64 px-6 py-6">
-              <nav className="mt-8 flex flex-col gap-2 text-lg font-medium">
+
+            <SheetContent side="right" className="w-full sm:w-80 px-6 py-6">
+              <nav className="mt-8 flex flex-col gap-3 text-lg font-medium">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/about", label: "About Me" },
@@ -66,12 +65,12 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="px-3 py-2 rounded-md transition-colors duration-200 hover:text-[#A10000] hover:font-semibold"
+                    className="px-3 py-2 rounded-md transition duration-200 hover:text-[#A10000]"
                   >
                     {item.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4 w-full">
+                <Button asChild className="mt-6 w-full">
                   <Link href="/contact">Contact Me</Link>
                 </Button>
               </nav>

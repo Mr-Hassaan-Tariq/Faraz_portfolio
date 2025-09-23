@@ -21,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={leagueSpartan.variable}>
-      <body className="min-h-screen bg-gray-50">
+      <body className="bg-gray-50 antialiased">
         <Navbar />
-        <main className="mx-auto max-w-7xl px-6 py-8">{children}</main>
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
