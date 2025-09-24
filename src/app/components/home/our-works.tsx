@@ -10,7 +10,7 @@ export default function OurWorks() {
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
             <Image src={DiamondIcon} alt="diamond" priority />
-            <p className="text-[20px] font-normal uppercase tracking-wide text-black">
+            <p className="font-[20px] font-normal uppercase tracking-wide text-black">
               Our Works
             </p>
           </div>

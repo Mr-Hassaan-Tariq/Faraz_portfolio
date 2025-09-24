@@ -3,6 +3,7 @@ import CLaimAssessment from "./components/home/claim-assessment";
 import ExploreServices from "./components/home/explore-services";
 import HeroSection from "./components/home/hero-section";
 import OurWorks from "./components/home/our-works";
+import Testimonials from "./components/home/testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ExploreServices />
       <CLaimAssessment />
       <OurWorks />
+      <Testimonials />
     </>
   );
 }
