@@ -8,12 +8,12 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-12 md:items-center">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <Image src={DiamondIcon} alt="diamond" priority />
-              <p className="text-[20px] font-normal uppercase tracking-wide text-black">
+              <p className="font-[20px] font-normal uppercase tracking-wide text-black">
                 About Me
               </p>
             </div>
