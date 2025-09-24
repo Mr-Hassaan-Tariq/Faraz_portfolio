@@ -2,6 +2,7 @@ import AboutMe from "./components/home/about-me";
 import CLaimAssessment from "./components/home/claim-assessment";
 import ExploreServices from "./components/home/explore-services";
 import HeroSection from "./components/home/hero-section";
+import OurWorks from "./components/home/our-works";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutMe />
       <ExploreServices />
       <CLaimAssessment />
+      <OurWorks />
     </>
   );
 }
