@@ -13,7 +13,7 @@ export default function AboutMe() {
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
               <Image src={DiamondIcon} alt="diamond" priority />
-              <p className="font-[20px] font-normal uppercase tracking-wide text-black">
+              <p className="text-[20px] font-normal uppercase tracking-wide text-black">
                 About Me
               </p>
             </div>

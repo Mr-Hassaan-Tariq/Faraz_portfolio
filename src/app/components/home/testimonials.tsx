@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
+import TestimonialImage from "../../../../public/logos/testimonial.png";
 
 export default function Testimonials() {
   return (
@@ -25,7 +26,7 @@ export default function Testimonials() {
           <div className="flex items-center gap-4">
             <div className="h-16 w-16 rounded-full bg-gray-300 overflow-hidden">
               <Image
-                src="/hero-placeholder.jpg"
+                src={TestimonialImage}
                 alt="profile"
                 width={64}
                 height={64}

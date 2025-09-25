@@ -4,10 +4,19 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import ReadyToTransform from "../../../../public/logos/ready-to-transform.png";
 import PhoneIcon from "../../../../public/logos/phone.svg";
+import ClaimImage from "../../../../public/logos/claim-assessment.png";
 
-export default function HeroSection() {
+export default function ClaimAssessment() {
   return (
-    <section className="relative h-[calc(100vh-120px)] md:h-[calc(100vh-120px)] w-full bg-[url('/hero-placeholder.jpg')] bg-cover bg-center">
+    <section className="relative h-[calc(100vh-120px)] md:h-[calc(100vh-120px)] w-full">
+      <Image
+        src={ClaimImage}
+        alt="Claim Assessment Background"
+        fill
+        priority
+        className="object-cover object-center"
+      />
+
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-between px-4 md:px-4 py-16 md:py-20">
