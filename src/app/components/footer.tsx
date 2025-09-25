@@ -63,13 +63,13 @@ export default function Footer() {
           />
         </div>
 
-        <div className="flex gap-1 mt-12 w-full border-t border-[#D6D6D6] pt-6 justify-center">
+        <div className="flex gap-1 mt-12 w-full border-t border-[#D6D6D6] pt-6 justify-center items-center">
           <Image
             src={CopyrightIcon}
             alt="copyright"
             className="h-[20px] w-auto"
           />
-          <p className="text-[18px] font-[500]">
+          <p className="text-[18px] font-[500] text-black">
             Aefaraz 2025 All right reserved.
           </p>
         </div>
