@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import AboutMeIcon from "../../../../public/logos/AboutMe.png";
+import AboutMeImage from "../../../../public/logos/AboutMe.png";
 import Image from "next/image";
 
 export default function AboutMe() {
@@ -50,7 +50,7 @@ export default function AboutMe() {
 
           <div className="flex justify-center md:justify-end mb-8 md:mb-0 md:mt-[110px]">
             <Image
-              src={AboutMeIcon}
+              src={AboutMeImage}
               alt="About Me"
               priority
               className="rounded-lg shadow-lg"
