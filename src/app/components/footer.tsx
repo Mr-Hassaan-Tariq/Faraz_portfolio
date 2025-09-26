@@ -11,7 +11,7 @@ import CopyrightIcon from "../../../public/logos/copyright.svg";
 
 const menuItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about-me", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
@@ -19,7 +19,7 @@ const menuItems = [
 
 export default function Footer() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-[#F9F9FB]">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-10 flex flex-col justify-center items-center">
         <Link href="/" className="flex items-center">
           <Image

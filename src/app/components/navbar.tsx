@@ -24,7 +24,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
           {[
             { href: "/", label: "Home" },
-            { href: "/about", label: "About Me" },
+            { href: "/about-me", label: "About Me" },
             { href: "/services", label: "Services" },
             { href: "/portfolio", label: "Portfolio" },
           ].map((item) => (
