@@ -1,5 +1,8 @@
 import HeroSection from "@/app/components/services/hero-section";
 import DesignProcess from "@/app/components/services/design-process";
+import Companies from "@/app/components/services/companies";
+import OurWorks from "@/app/components/home/our-works";
+import Contact from "@/app/components/home/contact";
 
 import ArchitecturalImage from "../../../../public/logos/architectural-hero.png";
 import ArchitecturalServiceImage from "../../../../public/logos/architectural-service.png";
@@ -10,9 +13,6 @@ import DesignProcess2 from "../../../../public/logos/design-process-2.png";
 import DesignProcess3 from "../../../../public/logos/design-process-3.png";
 import DesignProcess4 from "../../../../public/logos/design-process-4.png";
 import DesignProcess5 from "../../../../public/logos/design-process-5.png";
-import Companies from "@/app/components/services/companies";
-import OurWorks from "@/app/components/home/our-works";
-import Contact from "@/app/components/home/contact";
 
 export default function ArchitecturalDesign() {
   return (
