@@ -15,7 +15,7 @@ export default function Home() {
       <CLaimAssessment />
       <OurWorks />
       <Testimonials />
-      <Contact />
+      <Contact page="default" />
     </>
   );
 }
