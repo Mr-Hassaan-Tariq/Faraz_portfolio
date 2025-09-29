@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
+import WorkImage from "../../../../public/logos/portfolio-1.jpg";
 
 export default function OurWorks() {
   return (
@@ -25,56 +26,29 @@ export default function OurWorks() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="relative group overflow-hidden rounded-lg shadow-md">
-            <Image
-              src="/hero-placeholder.jpg"
-              alt="3 Bed Apartment"
-              width={500}
-              height={400}
-              className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
-              <h3 className="text-white text-xl font-bold">3 BED APARTMENT</h3>
-              <p className="text-white text-[18px] ">3D FLOOR PLAN</p>
-              <p className="mt-2 text-[10px]  text-white ">
-                DISCOVER THIS PROJECT
-              </p>
+          {[1, 2, 3].map((item) => (
+            <div
+              key={item}
+              className="relative group overflow-hidden rounded-lg shadow-md"
+            >
+              <Image
+                src={WorkImage}
+                alt="3 Bed Apartment"
+                width={500}
+                height={400}
+                className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
+                <h3 className="text-white text-xl font-bold">
+                  3 BED APARTMENT
+                </h3>
+                <p className="text-white text-[18px]">3D FLOOR PLAN</p>
+                <p className="mt-2 text-[10px] text-white">
+                  DISCOVER THIS PROJECT
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="relative group overflow-hidden rounded-lg shadow-md">
-            <Image
-              src="/hero-placeholder.jpg"
-              alt="3 Bed Apartment"
-              width={500}
-              height={400}
-              className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
-              <h3 className="text-white text-xl font-bold">3 BED APARTMENT</h3>
-              <p className="text-white text-[18px] ">3D FLOOR PLAN</p>
-              <p className="mt-2 text-[10px]  text-white ">
-                DISCOVER THIS PROJECT
-              </p>
-            </div>
-          </div>
-
-          <div className="relative group overflow-hidden rounded-lg shadow-md">
-            <Image
-              src="/hero-placeholder.jpg"
-              alt="3 Bed Apartment"
-              width={500}
-              height={400}
-              className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
-              <h3 className="text-white text-xl font-bold">3 BED APARTMENT</h3>
-              <p className="text-white text-[18px] ">3D FLOOR PLAN</p>
-              <p className="mt-2 text-[10px] text-white ">
-                DISCOVER THIS PROJECT
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

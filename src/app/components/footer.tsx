@@ -30,7 +30,7 @@ export default function Footer() {
         </Link>
 
         <nav className="mt-6">
-          <ul className="flex flex-wrap gap-10 text-[20px] font-[500] text-black">
+          <ul className="flex flex-col items-center gap-6 text-[18px] font-[500] text-black md:flex-row md:gap-10 md:text-[20px]">
             {menuItems.map((item) => (
               <li key={item.href}>
                 <Link
