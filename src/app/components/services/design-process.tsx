@@ -36,24 +36,25 @@ export default function DesignProcess({
           </h1>
         </div>
 
+        {/* Steps */}
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`flex gap-6 items-center mt-6 border-t border-[#D6D6D6] pt-6 ${
-              step.reverse ? "flex-row-reverse" : ""
+            className={`flex flex-col md:flex-row gap-6 items-center mt-6 border-t border-[#D6D6D6] pt-6 ${
+              step.reverse ? "md:flex-row-reverse" : ""
             }`}
           >
             <Image
               src={step.image}
               alt={step.title}
               priority
-              className="w-[500px] h-[300px] object-cover rounded-lg"
+              className="w-full md:w-[500px] h-[200px] md:h-[300px] object-cover rounded-lg"
             />
-            <div className="flex flex-col gap-3">
-              <p className="text-[#A10000] text-[30px] font-[500]">
+            <div className="flex flex-col gap-3 text-center md:text-left">
+              <p className="text-[#A10000] text-[24px] md:text-[30px] font-[500]">
                 {step.title}
               </p>
-              <p className="text-[18px] text-black font-[400] leading-relaxed">
+              <p className="text-[16px] md:text-[18px] text-black font-[400] leading-relaxed">
                 {step.description}
               </p>
             </div>
