@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image, { StaticImageData } from "next/image";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
+import { useRouter } from "next/navigation";
 
 interface ServiceOverviewProps {
   title: string;
@@ -21,6 +22,7 @@ export default function ServiceOverview({
   image,
   buttonText = "Start Your Project",
 }: ServiceOverviewProps) {
+  const router = useRouter();
   return (
     <section className="w-full bg-white">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
@@ -47,7 +49,10 @@ export default function ServiceOverview({
               </ul>
             )}
 
-            <Button className="mt-5 bg-[#A10000] text-white w-fit">
+            <Button
+              className="mt-5 bg-[#A10000] text-white w-fit"
+              onClick={() => router.push("/contact")}
+            >
               {buttonText}
             </Button>
           </div>

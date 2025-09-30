@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
+import { useRouter } from "next/navigation";
 
 interface HeroSectionProps {
   image: StaticImageData;
@@ -15,6 +16,7 @@ export default function HeroSection({
   title,
   description,
 }: HeroSectionProps) {
+  const router = useRouter();
   return (
     <section className="relative h-[calc(80vh-90px)] md:h-[calc(80vh-90px)] w-full">
       <Image
@@ -38,7 +40,12 @@ export default function HeroSection({
           <h1 className="mt-2 text-5xl font-bold text-white leading-tight">
             {description}
           </h1>
-          <Button className="mt-6 bg-[#A10000] text-white">Contact Me</Button>
+          <Button
+            className="mt-6 bg-[#A10000] text-white"
+            onClick={() => router.push("/contact")}
+          >
+            Contact Me
+          </Button>
         </div>
       </div>
     </section>

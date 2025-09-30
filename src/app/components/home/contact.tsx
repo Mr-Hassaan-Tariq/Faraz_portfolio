@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 
@@ -9,6 +10,7 @@ type ContactProps = {
 
 export default function Contact({ page = "default" }: ContactProps) {
   const isPortfolio = page === "portfolio";
+  const router = useRouter();
 
   return (
     <section
@@ -32,6 +34,7 @@ export default function Contact({ page = "default" }: ContactProps) {
                 ? "bg-[#A10000] text-white hover:bg-[#A10000]/90"
                 : "bg-white text-[#A10000] hover:bg-white"
             )}
+            onClick={() => router.push("/contact")}
           >
             Get Started
           </Button>
@@ -42,6 +45,7 @@ export default function Contact({ page = "default" }: ContactProps) {
                 ? "bg-transparent border border-[#A10000] text-[#A10000] hover:bg-transparent"
                 : "bg-transparent border border-white text-white hover:bg-transparent"
             )}
+            onClick={() => router.push("/about-me")}
           >
             Learn More
           </Button>

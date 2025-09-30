@@ -1,12 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import ReadyToTransform from "../../../../public/logos/ready-to-transform.png";
 import PhoneIcon from "../../../../public/logos/phone.svg";
 import ClaimImage from "../../../../public/logos/claim-assessment.png";
 
 export default function ClaimAssessment() {
+  const router = useRouter();
   return (
     <section className="relative h-[calc(100vh-120px)] md:h-[calc(100vh-120px)] w-full">
       <Image
@@ -29,7 +31,12 @@ export default function ClaimAssessment() {
             you unleash the full potential of your space.
           </p>
 
-          <Button className="mt-6 bg-[#A10000] text-white">Contact Me</Button>
+          <Button
+            className="mt-6 bg-[#A10000] text-white"
+            onClick={() => router.push("/contact")}
+          >
+            Contact Me
+          </Button>
         </div>
 
         <div className="flex flex-col items-end gap-2">

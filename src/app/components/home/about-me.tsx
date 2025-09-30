@@ -1,11 +1,14 @@
 "use client";
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 import AboutMeImage from "../../../../public/logos/AboutMe.png";
-import Image from "next/image";
 
 export default function AboutMe() {
+  const router = useRouter();
+
   return (
     <section className="w-full bg-white">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
@@ -43,7 +46,10 @@ export default function AboutMe() {
               spatial experiences that inspire.
             </p>
 
-            <Button className="mt-5 bg-[#A10000] text-white w-fit">
+            <Button
+              className="mt-5 bg-[#A10000] text-white w-fit"
+              onClick={() => router.push("/contact")}
+            >
               Contact Me
             </Button>
           </div>

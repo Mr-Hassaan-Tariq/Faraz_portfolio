@@ -1,11 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 import HeroImage from "../../../../public/logos/hero-section.png";
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="relative h-[calc(100vh-90px)] md:h-[calc(100vh-90px)] w-full">
       <Image
@@ -29,7 +32,12 @@ export default function HeroSection() {
           <h1 className="mt-2 text-6xl font-bold text-white leading-tight">
             Crafting Dreams into <br /> Spaces
           </h1>
-          <Button className="mt-6 bg-[#A10000] text-white">Contact Me</Button>
+          <Button
+            className="mt-6 bg-[#A10000] text-white"
+            onClick={() => router.push("/contact")}
+          >
+            Contact Me
+          </Button>
         </div>
       </div>
     </section>
