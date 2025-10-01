@@ -10,7 +10,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
             <p className="font-[20px] font-normal uppercase tracking-wide text-black">
               Testimonials
             </p>
@@ -31,6 +31,7 @@ export default function Testimonials() {
                 width={64}
                 height={64}
                 className="h-full w-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col">

@@ -26,7 +26,7 @@ export default function DesignProcess({
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               {sectionTitle}
             </p>
@@ -36,7 +36,6 @@ export default function DesignProcess({
           </h1>
         </div>
 
-        {/* Steps */}
         {steps.map((step, index) => (
           <div
             key={index}
@@ -49,6 +48,7 @@ export default function DesignProcess({
               alt={step.title}
               priority
               className="w-full md:w-[500px] h-[200px] md:h-[300px] object-cover rounded-lg"
+              loading="lazy"
             />
             <div className="flex flex-col gap-3 text-center md:text-left">
               <p className="text-[#A10000] text-[24px] md:text-[30px] font-[500]">

@@ -12,7 +12,7 @@ export default function DesignPhilosophy() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 pt-16 md:pt-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               My Journey
             </p>
@@ -31,6 +31,7 @@ export default function DesignPhilosophy() {
                 fill
                 className="object-contain"
                 priority
+                loading="lazy"
               />
             </div>
 
@@ -39,6 +40,7 @@ export default function DesignPhilosophy() {
               alt="Muhammad Faraz"
               className="relative z-10 h-full w-auto object-contain"
               priority
+              loading="lazy"
             />
           </div>
 

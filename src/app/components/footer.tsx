@@ -25,6 +25,7 @@ export default function Footer() {
           <Image
             src={MainLogo}
             alt="Logo"
+            loading="lazy"
             className="h-[40px] w-auto md:h-[180px]"
           />
         </Link>
@@ -49,17 +50,25 @@ export default function Footer() {
             src={FacebookIcon}
             alt="facebook"
             className="h-[40px] w-auto"
+            loading="lazy"
           />
           <Image
             src={InstagramIcon}
             alt="instagram"
             className="h-[40px] w-auto"
+            loading="lazy"
           />
-          <Image src={TwitterIcon} alt="twitter" className="h-[40px] w-auto" />
+          <Image
+            src={TwitterIcon}
+            alt="twitter"
+            className="h-[40px] w-auto"
+            loading="lazy"
+          />
           <Image
             src={LinkedinIcon}
             alt="linkedin"
             className="h-[40px] w-auto"
+            loading="lazy"
           />
         </div>
 
@@ -67,6 +76,7 @@ export default function Footer() {
           <Image
             src={CopyrightIcon}
             alt="copyright"
+            loading="lazy"
             className="h-[20px] w-auto"
           />
           <p className="text-[18px] font-[500] text-black">

@@ -12,7 +12,7 @@ export default function MyJourney() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               My Journey
             </p>
@@ -29,6 +29,7 @@ export default function MyJourney() {
             alt="journey"
             priority
             className="w-[500px] h-[300px] object-cover rounded-lg"
+            loading="lazy"
           />
 
           <div className="flex flex-col gap-3">
@@ -63,6 +64,7 @@ export default function MyJourney() {
             alt="journey"
             priority
             className="w-[500px] h-[300px] object-cover rounded-lg"
+            loading="lazy"
           />
         </div>
 
@@ -72,6 +74,7 @@ export default function MyJourney() {
             alt="journey"
             priority
             className="w-[500px] h-[300px] object-cover rounded-lg"
+            loading="lazy"
           />
           <div className="flex flex-col gap-3">
             <p className="text-[#A10000] text-[30px] font-[500]">

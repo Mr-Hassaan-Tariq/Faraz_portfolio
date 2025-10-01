@@ -103,6 +103,7 @@ export default function PortfolioGrid() {
                 src={item.image}
                 alt={item.title}
                 className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
               />
 
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>

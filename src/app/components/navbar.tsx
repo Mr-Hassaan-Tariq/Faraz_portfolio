@@ -47,6 +47,7 @@ export default function Navbar() {
             alt="Logo"
             className="h-[40px] w-auto md:h-[80px]"
             priority
+            loading="lazy"
           />
         </Link>
 

@@ -17,6 +17,7 @@ export default function ClaimAssessment() {
         fill
         priority
         className="object-cover object-center"
+        loading="lazy"
       />
 
       <div className="absolute inset-0 bg-black/40" />
@@ -47,10 +48,17 @@ export default function ClaimAssessment() {
               width={220}
               height={70}
               priority
+              loading="lazy"
             />
 
             <div className="flex gap-2 items-center mt-2">
-              <Image src={PhoneIcon} alt="phone" width={20} height={20} />
+              <Image
+                src={PhoneIcon}
+                alt="phone"
+                width={20}
+                height={20}
+                loading="lazy"
+              />
               <p className="text-white">+92 305 4339254</p>
             </div>
           </div>

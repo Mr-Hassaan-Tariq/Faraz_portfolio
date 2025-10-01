@@ -21,6 +21,7 @@ export default function Companies() {
               <Image
                 src={logo}
                 alt={`Company ${index + 1}`}
+                loading="lazy"
                 className="h-12 w-auto object-contain"
               />
               {index < companies.length - 1 && (

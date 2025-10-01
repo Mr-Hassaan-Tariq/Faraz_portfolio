@@ -18,7 +18,7 @@ export default function ContactDetails() {
 
             <div className="flex flex-col gap-3">
               <div className="mt-6 flex gap-4 items-center">
-                <Image src={MapIcon} alt="map" priority />
+                <Image src={MapIcon} alt="map" priority loading="lazy" />
                 <div className="flex flex-col gap-2">
                   <p className="font-bold text-[20px] mt-6">Address</p>
                   <p className="text-[#808080]">Lahore, Pakistan</p>
@@ -27,7 +27,7 @@ export default function ContactDetails() {
               <hr className="mt-6 border-t border-[#DADADA]" />
 
               <div className="flex gap-4 items-center">
-                <Image src={PhoneIcon} alt="phone" priority />
+                <Image src={PhoneIcon} alt="phone" priority loading="lazy" />
                 <div className="flex flex-col gap-2 mt-6">
                   <p className="font-bold text-[20px]">Contact Details</p>
                   <p className="text-[#808080]">+92-305-4339254</p>
@@ -36,7 +36,7 @@ export default function ContactDetails() {
               <hr className="mt-6 border-t border-[#DADADA]" />
 
               <div className="flex gap-4 items-center">
-                <Image src={MailIcon} alt="mail" priority />
+                <Image src={MailIcon} alt="mail" priority loading="lazy" />
                 <div className="flex flex-col gap-2 mt-6">
                   <p className="font-bold text-[20px]">Email Us</p>
                   <p className="text-[#808080]">farazjamil12@gmail.com</p>

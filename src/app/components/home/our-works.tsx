@@ -10,7 +10,7 @@ export default function OurWorks() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               Our Works
             </p>
@@ -37,6 +37,7 @@ export default function OurWorks() {
                 width={500}
                 height={400}
                 className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
                 <h3 className="text-white text-xl font-bold">
