@@ -10,7 +10,7 @@ export default function OurWorks() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
+            <Image src={DiamondIcon} alt="diamond" loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               Our Works
             </p>

@@ -15,7 +15,6 @@ export default function ClaimAssessment() {
         src={ClaimImage}
         alt="Claim Assessment Background"
         fill
-        priority
         className="object-cover object-center"
         loading="lazy"
       />
@@ -47,7 +46,6 @@ export default function ClaimAssessment() {
               alt="Ready to Transform"
               width={220}
               height={70}
-              priority
               loading="lazy"
             />
 

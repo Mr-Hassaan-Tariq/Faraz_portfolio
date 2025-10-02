@@ -11,7 +11,7 @@ export default function ExploreServices() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
+            <Image src={DiamondIcon} alt="diamond" loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               Our Services
             </p>
@@ -44,7 +44,6 @@ export default function ExploreServices() {
                 alt="arrow-up"
                 width={26}
                 height={26}
-                priority
                 className="cursor-pointer"
                 loading="lazy"
               />
@@ -67,7 +66,6 @@ export default function ExploreServices() {
                 alt="arrow-up"
                 width={26}
                 height={26}
-                priority
                 className="cursor-pointer"
               />
             </div>
@@ -96,7 +94,6 @@ export default function ExploreServices() {
                 alt="arrow-up"
                 width={26}
                 height={26}
-                priority
                 className="cursor-pointer"
                 loading="lazy"
               />
@@ -119,7 +116,6 @@ export default function ExploreServices() {
                 alt="arrow-up"
                 width={26}
                 height={26}
-                priority
                 className="cursor-pointer"
                 loading="lazy"
               />
@@ -142,7 +138,6 @@ export default function ExploreServices() {
                 alt="arrow-up"
                 width={26}
                 height={26}
-                priority
                 className="cursor-pointer"
                 loading="lazy"
               />

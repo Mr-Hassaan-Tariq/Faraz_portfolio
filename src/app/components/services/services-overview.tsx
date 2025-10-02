@@ -29,7 +29,7 @@ export default function ServiceOverview({
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-12 md:items-center">
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
-              <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
+              <Image src={DiamondIcon} alt="diamond" loading="lazy" />
               <p className="text-[20px] font-normal uppercase tracking-wide text-black">
                 {title}
               </p>
@@ -61,7 +61,6 @@ export default function ServiceOverview({
             <Image
               src={image}
               alt={subtitle}
-              priority
               className="rounded-lg shadow-lg"
               loading="lazy"
             />

@@ -14,7 +14,6 @@ export default function HeroSection() {
         src={HeroImage}
         alt="Hero Background"
         fill
-        priority
         loading="lazy"
         className="object-cover object-center"
       />
@@ -24,7 +23,7 @@ export default function HeroSection() {
       <div className="relative mx-auto flex h-full max-w-7xl items-center px-4 md:px-6">
         <div className="text-left">
           <div className="flex gap-2">
-            <Image src={DiamondIcon} alt="diamond" priority />
+            <Image src={DiamondIcon} alt="diamond" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-white">
               Contact Me
             </p>

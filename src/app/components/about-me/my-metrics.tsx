@@ -17,7 +17,7 @@ export default function MyMetrics() {
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
         <div className="flex flex-col mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={DiamondIcon} alt="diamond" priority loading="lazy" />
+            <Image src={DiamondIcon} alt="diamond" loading="lazy" />
             <p className="text-[20px] font-normal uppercase tracking-wide text-black">
               My Metrics
             </p>
@@ -31,7 +31,6 @@ export default function MyMetrics() {
         <Image
           src={MyMetricsImage}
           alt="my-metrics"
-          priority
           className="mt-6 object-cover rounded-lg"
           loading="lazy"
         />
