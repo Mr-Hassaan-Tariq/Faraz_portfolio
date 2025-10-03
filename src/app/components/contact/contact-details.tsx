@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import { Button } from "@/components/ui/button";
+
 import MapIcon from "../../../../public/logos/address-icon.svg";
 import PhoneIcon from "../../../../public/logos/phone-icon.svg";
 import MailIcon from "../../../../public/logos/main-icon.svg";
-import { Button } from "@/components/ui/button";
 
 export default function ContactDetails() {
   const [formData, setFormData] = useState({
@@ -55,14 +57,14 @@ export default function ContactDetails() {
       const data = await res.json();
 
       if (data.success) {
-        setStatus("✅ Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({ name: "", phone: "", email: "", message: "" });
       } else {
-        setStatus("❌ Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      setStatus("❌ Error sending message. Please try later.");
+      toast.error("Error sending message. Please try later.");
     }
 
     setLoading(false);

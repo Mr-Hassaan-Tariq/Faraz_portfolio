@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -24,7 +26,14 @@ export default function RootLayout({
     <html lang="en" className={leagueSpartan.variable}>
       <body className="bg-gray-50 antialiased font-spartan">
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative">
+          {children}
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar
+          />
+        </main>
         <Footer />
       </body>
     </html>
