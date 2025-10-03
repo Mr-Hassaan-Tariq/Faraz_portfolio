@@ -29,7 +29,8 @@ export default function ContactDetails() {
     setStatus("");
 
     try {
-      const res = await fetch("http://localhost:3000/send-email", {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${baseUrl}/api/send-mail`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
