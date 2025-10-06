@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer, { SentMessageInfo } from "nodemailer";
 
 export async function POST(req: Request) {
   try {
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       },
     });
 
-    const info = await transporter.sendMail({
+    const info: SentMessageInfo = await transporter.sendMail({
       from: {
         name: process.env.EMAIL_FROM_NAME || "Portfolio Website",
         address: process.env.EMAIL_FROM_ADDRESS || "no-reply@example.com",
@@ -37,10 +37,14 @@ export async function POST(req: Request) {
       JSON.stringify({ success: true, messageId: info.messageId }),
       { status: 200 }
     );
-  } catch (error: any) {
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return new Response(JSON.stringify({ error: error.message }), {
+        status: 500,
+      });
+    }
+    return new Response(JSON.stringify({ error: "Unknown error occurred" }), {
+      status: 500,
+    });
   }
 }

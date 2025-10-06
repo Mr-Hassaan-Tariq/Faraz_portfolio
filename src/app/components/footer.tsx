@@ -12,12 +12,23 @@ import CopyrightIcon from "../../../public/logos/copyright.svg";
 const menuItems = [
   { href: "/", label: "Home" },
   { href: "/about-me", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/services/architectural-design", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
+const socialLinks = {
+  facebook: "https://facebook.com/",
+  instagram: "https://instagram.com/",
+  twitter: "https://twitter.com/",
+  linkedin: "https://linkedin.com/",
+};
+
 export default function Footer() {
+  const handleSocialClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="w-full bg-[#F9F9FB]">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-10 flex flex-col justify-center items-center">
@@ -49,25 +60,29 @@ export default function Footer() {
           <Image
             src={FacebookIcon}
             alt="facebook"
-            className="h-[40px] w-auto"
+            className="h-[40px] w-auto cursor-pointer"
+            onClick={() => handleSocialClick(socialLinks.facebook)}
             loading="lazy"
           />
           <Image
             src={InstagramIcon}
             alt="instagram"
-            className="h-[40px] w-auto"
+            className="h-[40px] w-auto cursor-pointer"
+            onClick={() => handleSocialClick(socialLinks.instagram)}
             loading="lazy"
           />
           <Image
             src={TwitterIcon}
             alt="twitter"
-            className="h-[40px] w-auto"
+            className="h-[40px] w-auto cursor-pointer"
+            onClick={() => handleSocialClick(socialLinks.twitter)}
             loading="lazy"
           />
           <Image
             src={LinkedinIcon}
             alt="linkedin"
-            className="h-[40px] w-auto"
+            className="h-[40px] w-auto cursor-pointer"
+            onClick={() => handleSocialClick(socialLinks.linkedin)}
             loading="lazy"
           />
         </div>
