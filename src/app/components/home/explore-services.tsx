@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 import ArrowUpRightIcon from "../../../../public/logos/arrow-up-right.svg";
 import ExploreServiceImage from "../../../../public/logos/explore-service.png";
 
 export default function ExploreServices() {
+  const router = useRouter();
   return (
     <section className="w-full bg-white">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
@@ -28,7 +30,10 @@ export default function ExploreServices() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          <div className="p-[84px] flex flex-col bg-[#F7F7F7] justify-between">
+          <div
+            className="p-[84px] flex flex-col bg-[#F7F7F7] justify-between cursor-pointer transform transition duration-300 hover:scale-101"
+            onClick={() => router.push("/services/architectural-design")}
+          >
             <p className="text-[32px] font-semibold text-black">
               Architectural Design
             </p>
@@ -50,7 +55,10 @@ export default function ExploreServices() {
             </div>
           </div>
 
-          <div className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between ">
+          <div
+            className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between cursor-pointer transform transition duration-300 hover:scale-101"
+            onClick={() => router.push("/services/interior-design")}
+          >
             <p className="text-[32px] font-semibold text-black">
               Interior Design
             </p>
@@ -78,7 +86,10 @@ export default function ExploreServices() {
             loading="lazy"
           />
 
-          <div className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between ">
+          <div
+            className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between cursor-pointer transform transition duration-300 hover:scale-101"
+            onClick={() => router.push("/services/landscape-design")}
+          >
             <p className="text-[32px] font-semibold text-black">
               Landscape Design
             </p>
@@ -100,7 +111,10 @@ export default function ExploreServices() {
             </div>
           </div>
 
-          <div className="p-[84px] flex flex-col bg-[#F7F7F7] justify-between">
+          <div
+            className="p-[84px] flex flex-col bg-[#F7F7F7] justify-between cursor-pointer transform transition duration-300 hover:scale-101"
+            onClick={() => router.push("/services/3d-visualization")}
+          >
             <p className="text-[32px] font-semibold text-black">
               3D Visualization & Rendering
             </p>
@@ -122,7 +136,10 @@ export default function ExploreServices() {
             </div>
           </div>
 
-          <div className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between">
+          <div
+            className="p-[84px] flex flex-col bg-[#EBE8E5] justify-between cursor-pointer transform transition duration-300 hover:scale-101"
+            onClick={() => router.push("/services/animation")}
+          >
             <p className="text-[32px] font-semibold text-black">
               Animation Services
             </p>

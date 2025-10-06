@@ -102,7 +102,7 @@ export default function ContactDetails() {
                 <Image src={MailIcon} alt="mail" loading="lazy" />
                 <div className="flex flex-col gap-2 mt-6">
                   <p className="font-bold text-[20px]">Email Us</p>
-                  <p className="text-[#808080]">iammrhassantariq@gmail.com</p>
+                  <p className="text-[#808080]">farazjamil12@gmail.com</p>
                 </div>
               </div>
             </div>

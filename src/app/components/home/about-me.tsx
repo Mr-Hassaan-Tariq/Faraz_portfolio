@@ -27,7 +27,7 @@ export default function AboutMe() {
 
             <p className="mt-3 text-black">
               As an Architectural Engineer and Interior Designer, I bring a
-              blend of technical precision and creative innovation. With over 5
+              blend of technical precision and creative innovation. With over 6
               years of field experience, I have led and contributed to various
               projects including:
             </p>
