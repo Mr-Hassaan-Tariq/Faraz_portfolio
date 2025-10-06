@@ -32,6 +32,28 @@ const useCountUp = (target: number, duration = 2000) => {
   return count;
 };
 
+function MetricItem({
+  number,
+  suffix,
+  label,
+}: {
+  number: number;
+  suffix: string;
+  label: string;
+}) {
+  const count = useCountUp(number, 2000);
+
+  return (
+    <div className="px-6 py-6">
+      <p className="text-[#A10000] text-4xl font-[500]">
+        {count}
+        {count >= number ? suffix : ""}
+      </p>
+      <p className="text-[16px] font-[400] mt-2 text-black">{label}</p>
+    </div>
+  );
+}
+
 export default function MyMetrics() {
   return (
     <section className="w-full bg-[#F7F7F7]">
@@ -57,20 +79,14 @@ export default function MyMetrics() {
         />
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#D6D6D6] text-center">
-          {metrics.map((item, index) => {
-            const count = useCountUp(item.number, 2000);
-            return (
-              <div key={index} className="px-6 py-6">
-                <p className="text-[#A10000] text-4xl font-[500]">
-                  {count}
-                  {count >= item.number ? item.suffix : ""}
-                </p>
-                <p className="text-[16px] font-[400] mt-2 text-black">
-                  {item.label}
-                </p>
-              </div>
-            );
-          })}
+          {metrics.map((item, index) => (
+            <MetricItem
+              key={index}
+              number={item.number}
+              suffix={item.suffix}
+              label={item.label}
+            />
+          ))}
         </div>
       </div>
     </section>
