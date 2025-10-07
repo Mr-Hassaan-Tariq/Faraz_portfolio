@@ -48,7 +48,11 @@ export default function Testimonials() {
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
-          autoplay={{ delay: 1000 }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          speed={1200}
         >
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>

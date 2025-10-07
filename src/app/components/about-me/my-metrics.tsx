@@ -12,22 +12,22 @@ const metrics = [
   { number: 6, suffix: "+", label: "Years of Experience" },
 ];
 
-const useCountUp = (target: number, duration = 2000) => {
+const useCountUp = (startCount: boolean, target: number, duration = 2000) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (!startCount) return;
+
     let start = 0;
     const stepTime = Math.max(Math.floor(duration / target), 20);
     const timer = setInterval(() => {
       start += 1;
       setCount(start);
-      if (start >= target) {
-        clearInterval(timer);
-      }
+      if (start >= target) clearInterval(timer);
     }, stepTime);
 
     return () => clearInterval(timer);
-  }, [target, duration]);
+  }, [startCount, target, duration]);
 
   return count;
 };
@@ -36,12 +36,14 @@ function MetricItem({
   number,
   suffix,
   label,
+  startCount,
 }: {
   number: number;
   suffix: string;
   label: string;
+  startCount: boolean;
 }) {
-  const count = useCountUp(number, 2000);
+  const count = useCountUp(startCount, number, 2000);
 
   return (
     <div className="px-6 py-6">
@@ -55,6 +57,13 @@ function MetricItem({
 }
 
 export default function MyMetrics() {
+  const [startCount, setStartCount] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setStartCount(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="w-full bg-[#F7F7F7]">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-20">
@@ -85,6 +94,7 @@ export default function MyMetrics() {
               number={item.number}
               suffix={item.suffix}
               label={item.label}
+              startCount={startCount}
             />
           ))}
         </div>
