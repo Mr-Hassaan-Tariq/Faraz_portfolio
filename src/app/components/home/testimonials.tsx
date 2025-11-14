@@ -8,27 +8,33 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import TestimonialImage from "../../../../public/logos/testimonial.png";
 
 export default function Testimonials() {
   const testimonials = [
     {
       text: "“Faraz transformed our space into a masterpiece. From initial concepts to final execution, they demonstrated professionalism and creativity at every step. Highly recommend!”",
-      name: "Sarah Khan",
+      name: "Hassaan Tariq",
       role: "Satisfied Homeowner",
-      image: TestimonialImage,
     },
     {
-      text: "“Working with Faraz was a fantastic experience. Their designs brought our vision to life and exceeded expectations.”",
-      name: "Ali Raza",
-      role: "Commercial Client",
-      image: TestimonialImage,
+      text: "“We appreciate your dedication in helping us complete the task on time.”",
+      name: "M. Asim",
+      role: "",
     },
     {
-      text: "“The attention to detail and ability to blend modern aesthetics with functionality is unmatched.”",
-      name: "Fatima Ahmed",
-      role: "Interior Enthusiast",
-      image: TestimonialImage,
+      text: "“Faraz did an excellent job improving our elevation design despite the challenge of the existing ground floor. His innovative solutions and keen attention to detail made the project seamless. Highly recommend.”",
+      name: "Shammas Shahid",
+      role: "Tourist & Traveller",
+    },
+    {
+      text: "“He is an amazing artist to work with for sure. Good at communication and skills!”",
+      name: "Mian Sohaib Fida",
+      role: "Advocate",
+    },
+    {
+      text: "“Muhammad delivers professional design renderings. Very creative and beautiful work. It's a pleasure working together!”",
+      name: "Nadia Aurangzeb",
+      role: "Professor",
     },
   ];
 
@@ -44,6 +50,7 @@ export default function Testimonials() {
           </div>
         </div>
 
+        {/* Slider */}
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
@@ -57,27 +64,23 @@ export default function Testimonials() {
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col">
-                <p className="text-[22px] md:text-[28px] text-[#101010] font-[500] w-full mb-6">
+                <p className="text-[22px] md:text-[28px] text-[#101010] font-[500] w-full mb-6 leading-[1.4]">
                   {t.text}
                 </p>
 
                 <div className="flex justify-end">
                   <div className="flex items-center gap-4">
-                    <div className="h-16 w-16 rounded-full bg-gray-300 overflow-hidden">
-                      <Image
-                        src={t.image}
-                        alt={t.name}
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                      />
+                    {/* Initial letter circle */}
+                    <div className="h-14 w-14 rounded-full bg-black/80 flex items-center justify-center text-white text-[22px] font-bold">
+                      {t.name.charAt(0)}
                     </div>
-                    <div className="flex flex-col text-righleft">
+                    <div className="flex flex-col text-left">
                       <p className="text-[18px] font-bold text-[#101010]">
                         {t.name}
                       </p>
-                      <p className="text-[14px] text-[#878787]">{t.role}</p>
+                      {t.role && (
+                        <p className="text-[14px] text-[#878787]">{t.role}</p>
+                      )}
                     </div>
                   </div>
                 </div>
