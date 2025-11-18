@@ -6,10 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 
-import Hero1 from "../../../../public/logos/hero-section-1.jpg";
+import Hero1 from "../../../../public/logos/hero-section-1.webp";
 import Hero2 from "../../../../public/logos/hero-section-2.jpeg";
-import Hero3 from "../../../../public/logos/hero-section-3.jpg";
-import Hero4 from "../../../../public/logos/hero-section-4.jpg";
+import Hero3 from "../../../../public/logos/hero-section-3.webp";
+import Hero4 from "../../../../public/logos/hero-section-4.webp";
 
 export default function HeroSection() {
   const router = useRouter();

@@ -3,12 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import PortfolioImage1 from "../../../../public/logos/portfolio-1.jpg";
-import PortfolioImage2 from "../../../../public/logos/portfolio-2.jpg";
-import PortfolioImage3 from "../../../../public/logos/portfolio-3.jpg";
-import PortfolioImage4 from "../../../../public/logos/portfolio-4.jpg";
-import PortfolioImage5 from "../../../../public/logos/portfolio-5.jpg";
-import PortfolioImage6 from "../../../../public/logos/portfolio-6.jpg";
+import PortfolioImage1 from "../../../../public/logos/portfolio-1.webp";
+import PortfolioImage2 from "../../../../public/logos/portfolio-2.webp";
+import PortfolioImage3 from "../../../../public/logos/portfolio-3.webp";
+import PortfolioImage4 from "../../../../public/logos/portfolio-4.webp";
+import PortfolioImage5 from "../../../../public/logos/portfolio-5.webp";
+import PortfolioImage6 from "../../../../public/logos/portfolio-6.webp";
 
 const categories = [
   "All",
