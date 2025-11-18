@@ -4,15 +4,15 @@ import Companies from "@/app/components/services/companies";
 import OurWorks from "@/app/components/home/our-works";
 import Contact from "@/app/components/home/contact";
 
-import AnimationImage from "../../../../public/logos/animation-hero.png";
-import AnimationServiceImage from "../../../../public/logos/animation-service.png";
+import AnimationImage from "../../../../public/logos/animation-hero.webp";
+import AnimationServiceImage from "../../../../public/logos/animation-service.webp";
 import ServiceOverview from "@/app/components/services/services-overview";
 
-import DesignProcess1 from "../../../../public/logos/animation-design-process-1.png";
-import DesignProcess2 from "../../../../public/logos/animation-design-process-2.png";
-import DesignProcess3 from "../../../../public/logos/animation-design-process-3.png";
-import DesignProcess4 from "../../../../public/logos/animation-design-process-4.png";
-import DesignProcess5 from "../../../../public/logos/animation-design-process-5.png";
+import DesignProcess1 from "../../../../public/logos/animation-design-process-1.webp";
+import DesignProcess2 from "../../../../public/logos/animation-design-process-2.webp";
+import DesignProcess3 from "../../../../public/logos/animation-design-process-3.webp";
+import DesignProcess4 from "../../../../public/logos/animation-design-process-4.webp";
+import DesignProcess5 from "../../../../public/logos/animation-design-process-5.webp";
 
 export default function AnimationDesign() {
   return (

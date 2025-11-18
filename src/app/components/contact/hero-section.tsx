@@ -3,7 +3,7 @@
 import Image from "next/image";
 // import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import HeroImage from "../../../../public/logos/contact-hero.jpg";
+import HeroImage from "../../../../public/logos/contact-hero.webp";
 
 export default function HeroSection() {
   return (

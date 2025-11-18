@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import MyMetricsImage from "../../../../public/logos/my-metrics.png";
+import MyMetricsImage from "../../../../public/logos/my-metrics.webp";
 
 const metrics = [
   { number: 300, suffix: "+", label: "Projects Completed" },

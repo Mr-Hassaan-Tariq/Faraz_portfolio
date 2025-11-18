@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import WorkImage from "../../../../public/logos/portfolio-1.jpg";
+import WorkImage from "../../../../public/logos/portfolio-1.webp";
 
 export default function OurWorks() {
   const router = useRouter();

@@ -4,15 +4,15 @@ import Companies from "@/app/components/services/companies";
 import OurWorks from "@/app/components/home/our-works";
 import Contact from "@/app/components/home/contact";
 
-import VisualizationImage from "../../../../public/logos/visualization-hero.png";
-import VisualizationServiceImage from "../../../../public/logos/visualization-service.png";
+import VisualizationImage from "../../../../public/logos/visualization-hero.webp";
+import VisualizationServiceImage from "../../../../public/logos/visualization-service.webp";
 import ServiceOverview from "@/app/components/services/services-overview";
 
-import DesignProcess1 from "../../../../public/logos/visualization-design-process-1.png";
-import DesignProcess2 from "../../../../public/logos/visualization-design-process-2.png";
-import DesignProcess3 from "../../../../public/logos/visualization-design-process-3.png";
-import DesignProcess4 from "../../../../public/logos/visualization-design-process-4.png";
-import DesignProcess5 from "../../../../public/logos/visualization-design-process-5.png";
+import DesignProcess1 from "../../../../public/logos/visualization-design-process-1.webp";
+import DesignProcess2 from "../../../../public/logos/visualization-design-process-2.webp";
+import DesignProcess3 from "../../../../public/logos/visualization-design-process-3.webp";
+import DesignProcess4 from "../../../../public/logos/visualization-design-process-4.webp";
+import DesignProcess5 from "../../../../public/logos/visualization-design-process-5.webp";
 
 export default function VisualizationDesign() {
   return (

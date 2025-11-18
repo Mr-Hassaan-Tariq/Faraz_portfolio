@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 import ArrowUpRightIcon from "../../../../public/logos/arrow-up-right.svg";
-import ExploreServiceImage from "../../../../public/logos/explore-service.png";
+import ExploreServiceImage from "../../../../public/logos/explore-service.webp";
 
 export default function ExploreServices() {
   const router = useRouter();

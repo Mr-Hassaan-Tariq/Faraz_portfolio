@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { leagueSpartan, qwitcherGrypen } from "@/app/fonts";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import DesignPhilosophyImage from "../../../../public/logos/design-philosophy.png";
-import DesignBgImage from "../../../../public/logos/design-bg.png";
+import DesignPhilosophyImage from "../../../../public/logos/design-philosophy.webp";
+import DesignBgImage from "../../../../public/logos/design-bg.webp";
 
 export default function DesignPhilosophy() {
   return (
