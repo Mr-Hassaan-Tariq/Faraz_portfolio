@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import AboutMeImage from "../../../../public/logos/AboutMe.png";
+import AboutMeImage from "../../../../public/logos/AboutMe.webp";
 
 export default function AboutMe() {
   const router = useRouter();

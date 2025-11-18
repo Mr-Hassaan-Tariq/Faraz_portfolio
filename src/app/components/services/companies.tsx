@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 
-import Company1 from "../../../../public/logos/company-1.png";
-import Company2 from "../../../../public/logos/company-2.png";
-import Company3 from "../../../../public/logos/company-3.png";
-import Company4 from "../../../../public/logos/company-4.png";
-import Company5 from "../../../../public/logos/company-5.png";
-import Company6 from "../../../../public/logos/company-6.png";
+import Company1 from "../../../../public/logos/company-1.webp";
+import Company2 from "../../../../public/logos/company-2.webp";
+import Company3 from "../../../../public/logos/company-3.webp";
+import Company4 from "../../../../public/logos/company-4.webp";
+import Company5 from "../../../../public/logos/company-5.webp";
+import Company6 from "../../../../public/logos/company-6.webp";
 
 const companies = [Company1, Company2, Company3, Company4, Company5, Company6];
 

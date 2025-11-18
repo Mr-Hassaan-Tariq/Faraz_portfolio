@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import HeroImage from "../../../../public/logos/about-hero.png";
+import HeroImage from "../../../../public/logos/about-hero.webp";
 
 export default function HeroSection() {
   const router = useRouter();

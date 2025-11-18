@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
-import Journey1 from "../../../../public/logos/journey-1.png";
-import Journey2 from "../../../../public/logos/journey-2.png";
-import Journey3 from "../../../../public/logos/journey-3.png";
+import Journey1 from "../../../../public/logos/journey-1.webp";
+import Journey2 from "../../../../public/logos/journey-2.webp";
+import Journey3 from "../../../../public/logos/journey-3.webp";
 
 export default function MyJourney() {
   return (

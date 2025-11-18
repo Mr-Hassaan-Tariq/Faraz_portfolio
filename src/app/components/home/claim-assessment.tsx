@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-import ClaimImage from "../../../../public/logos/claim-assessment.png";
+import ClaimImage from "../../../../public/logos/claim-assessment.webp";
 import PhoneIcon from "../../../../public/logos/phone.svg";
 import FarazImage from "../../../../public/logos/faraz.jpeg";
 
