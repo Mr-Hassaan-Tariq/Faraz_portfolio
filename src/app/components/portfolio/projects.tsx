@@ -2,24 +2,13 @@
 
 import { useState } from "react";
 
-<<<<<<< HEAD
-import PortfolioImage1 from "../../../../public/logos/portfolio-1.webp";
-import PortfolioImage2 from "../../../../public/logos/portfolio-2.webp";
-import PortfolioImage3 from "../../../../public/logos/portfolio-3.webp";
-import PortfolioImage4 from "../../../../public/logos/portfolio-4.webp";
-import PortfolioImage5 from "../../../../public/logos/portfolio-5.webp";
-import PortfolioImage6 from "../../../../public/logos/portfolio-6.webp";
-=======
-// Components
-import CategoryFilter from "./CategoryFilter";
-import PortfolioCard from "./PortfolioCard";
->>>>>>> 7f13b7f (refactor: streamline portfolio component by integrating category filter and portfolio card components)
-
 // Data & Utilities
 import {
   portfolioItems,
   filterPortfolioItems,
 } from "./data/portfolio-data";
+import CategoryFilter from "./CategoryFilter";
+import PortfolioCard from "./PortfolioCard";
 
 export default function PortfolioGrid() {
   const [activeCategory, setActiveCategory] = useState("All");

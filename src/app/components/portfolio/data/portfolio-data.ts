@@ -41,7 +41,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Apartments",
     title: "3 BED APARTMENT",
     subtitle: "3D FLOOR PLAN",
-    image: `${PORTFOLIO_PATH}/portfolio-1.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-1.webp`,
   },
 
   // Offices
@@ -50,14 +50,14 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Offices",
     title: "ADVOCATE OFFICE",
     subtitle: "INTERIOR DESIGN",
-    image: `${PORTFOLIO_PATH}/portfolio-2.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-2.webp`,
   },
   {
     id: 4,
     category: "Offices",
     title: "FORMULATRIX OFFICE",
     subtitle: "INTERIOR DESIGN",
-    image: `${PORTFOLIO_PATH}/portfolio-4.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-4.webp`,
   },
 
   // Shops
@@ -66,7 +66,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Shops",
     title: "COMPUTER SHOP",
     subtitle: "INTERIOR DESIGN",
-    image: `${PORTFOLIO_PATH}/portfolio-3.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-3.webp`,
   },
 
   // Landscape
@@ -75,7 +75,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Landscape",
     title: "OUTDOOR PARK",
     subtitle: "LANDSCAPE DESIGN",
-    image: `${PORTFOLIO_PATH}/portfolio-6.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-6.webp`,
   },
 
   // Houses
@@ -84,7 +84,7 @@ export const portfolioItems: PortfolioItem[] = [
     category: "Houses",
     title: "NASHEMAN E IQBAL SOCIETY",
     subtitle: "ENTRANCE DESIGN",
-    image: `${PORTFOLIO_PATH}/portfolio-5.jpg`,
+    image: `${PORTFOLIO_PATH}/portfolio-5.webp`,
   },
   {
     id: 7,
