@@ -128,6 +128,43 @@ export const portfolioItems: PortfolioItem[] = [
     subtitle: "COMPLETE DESIGN",
     image: `${HOUSE_PATH}/1 kanal house in PUEHS lahore.webp`,
   },
+  {
+    id: 13,
+    category: "Houses",
+    title: "1 KANAL INTERIOR DESIGN KARACHI",
+    subtitle: "INTERIOR DESIGN",
+    image: `${HOUSE_PATH}/1 kanal interior design karachi.webp`,
+  }, {
+    id: 14,
+    category: "Houses",
+    title: "1 KANAL INTERIOR PROJECT BAHRIA TOWN LAHORE",
+    subtitle: "INTERIOR PROJECT",
+    image: `${HOUSE_PATH}/1 kanal interior project bahria town lahore.webp`,
+  }, {
+    id: 15,
+    category: "Houses",
+    title: "1 KANAL INTERIOR PROJECT HYDERABAD",
+    subtitle: "INTERIOR PROJECT",
+    image: `${HOUSE_PATH}/1 kanal interior project hyderabad.webp`,
+  }, {
+    id: 16,
+    category: "Houses",
+    title: "3 MARLA FRONT ELEVATION LAHORE",
+    subtitle: "FRONT ELEVATION",
+    image: `${HOUSE_PATH}/3 MARLA FRONT ELEVATION LAHORE.webp`,
+  }, {
+    id: 17,
+    category: "Houses",
+    title: "2D RESIDENCE PLAN USA",
+    subtitle: "RESIDENCE PLAN",
+    image: `${HOUSE_PATH}/2d RESIDENCE PLAN USA.webp`,
+  }, {
+    id: 18,
+    category: "Houses",
+    title: "5 MARLA COMPLETE ARCHITECTURAL DESIGN FAISALABAD",
+    subtitle: "COMPLETE ARCHITECTURAL DESIGN",
+    image: `${HOUSE_PATH}/5 MARLA COMPLETE ARCHITECTURAL DESIGN FAISALABAD.webp`,
+  }
 ];
 
 // ===========================================
