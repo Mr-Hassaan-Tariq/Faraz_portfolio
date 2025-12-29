@@ -164,6 +164,102 @@ export const portfolioItems: PortfolioItem[] = [
     title: "5 MARLA COMPLETE ARCHITECTURAL DESIGN FAISALABAD",
     subtitle: "COMPLETE ARCHITECTURAL DESIGN",
     image: `${HOUSE_PATH}/5 MARLA COMPLETE ARCHITECTURAL DESIGN FAISALABAD.webp`,
+  }, {
+    id: 19,
+    category: "Houses",
+    title: "5 MARLA COMPLETE DESIGN PROJECT AL-HAFEEZ GARDENS PHASE 2 LAHORE",
+    subtitle: "COMPLETE DESIGN",
+    image: `${HOUSE_PATH}/5 MARLA COMPLETE DESIGN PROJECT AL-HAFEEZ GARDENS PHASE 2 LAHORE.webp`,
+  }, {
+    id: 20,
+    category: "Houses",
+    title: "5 MARLA CORNER RESIDENCE DESIGN TAJBAGH LAHORE",
+    subtitle: "CORNER RESIDENCE DESIGN",
+    image: `${HOUSE_PATH}/5 MARLA CORNER RESIDENCE DESIGN TAJBAGH LAHORE.webp`,
+  }, {
+    id: 21,
+    category: "Houses",
+    title: "5 MARLA FRONT ELEVATION LAKE CITY LAHORE",
+    subtitle: "FRONT ELEVATION",
+    image: `${HOUSE_PATH}/5 MARLA FRONT ELEVATION LAKE CITY LAHORE .webp`,
+  }, {
+    id: 22,
+    category: "Houses",
+    title: "8 MARLA COMPLETE INTERIOR PROJECT BAHRIA TOWN",
+    subtitle: "COMPLETE INTERIOR PROJECT",
+    image: `${HOUSE_PATH}/8 marla complete interior project bahria town.webp`,
+  }, {
+    id: 23,
+    category: "Houses",
+    title: "10 MARLA DESIGN TOWNSHIP LAHORE",
+    subtitle: "DESIGNSIGN FRONT ELEVATION",
+    image: `${HOUSE_PATH}/10 MARLA DESIGN TOWNSHIP LAHORE.webp`,
+  }, {
+    id: 24,
+    category: "Houses",
+    title: "10 MARLA CLASSIC HOUSE GUJRAWALA",
+    subtitle: "CLASSIC HOUSE",
+    image: `${HOUSE_PATH}/10 MARLA CLASSIC HOUSE GUJRAWALA.webp`,
+  }, {
+    id: 25,
+    category: "Houses",
+    title: "10 MARLA INTERIOR DESIGN LAHORE",
+    subtitle: "INTERIOR DESIGN",
+    image: `${HOUSE_PATH}/10 marla interior design lahore.webp`,
+  }, {
+    id: 26,
+    category: "Houses",
+    title: "10 MARLA NEO CLASSIC INTERIOR BAHRIA TOWN",
+    subtitle: "NEO CLASSIC INTERIOR",
+    image: `${HOUSE_PATH}/10 marla neo classic interior bahria town.webp`,
+  }, {
+    id: 27,
+    category: "Houses",
+    title: "12 MARLA INTERIOR DESIGN JOHAR TOWN LAHORE",
+    subtitle: "INTERIOR DESIGN",
+    image: `${HOUSE_PATH}/12 marla interior design johar town lahore .webp`,
+  }, {
+    id: 28,
+    category: "Houses",
+    title: "15 MARLA HOUSE ELEVATION DESIGN KASHMIR",
+    subtitle: "ELEVATION DESIGN",
+    image: `${HOUSE_PATH}/15 marla house elevation design kashmir.webp`,
+  }, {
+    id: 29,
+    category: "Houses",
+    title: "BEDROOM INTERIOR DESIGN BISMAILAH HOUSING SCHEME LAHORE",
+    subtitle: "BEDROOM INTERIOR DESIGN",
+    image: `${HOUSE_PATH}/bedroom interior design, Bismillah housing scheme lahore.webp`,
+  }, {
+    id: 30,
+    category: "Houses",
+    title: "ELEVATION DESIGN OF RESIDENCE IN BATAL KASHMIR",
+    subtitle: "ELEVATION DESIGN",
+    image: `${HOUSE_PATH}/ELEVATION DESIGN OF RESIDENCE IN BATAL KASHMIR.webp`,
+  }, {
+    id: 31,
+    category: "Houses",
+    title: "FARMHOUSE KARACHI",
+    subtitle: "FARMHOUSE",
+    image: `${HOUSE_PATH}/FARMHOUSE KARACHI.webp`,
+  }, {
+    id: 32,
+    category: "Houses",
+    title: "GAZEEBO DESIGN MURREE",
+    subtitle: "GAZEEBO",
+    image: `${HOUSE_PATH}/GAZEEBO DESIGN MURREE.webp`,
+  }, {
+    id: 33,
+    category: "Houses",
+    title: "MARTIN AND PEGGY SCOT",
+    subtitle: "MARTIN AND PEGGY SCOT",
+    image: `${HOUSE_PATH}/martin and peggy scot.webp`,
+  }, {
+    id: 34,
+    category: "Houses",
+    title: "VILLA DESIGN PROJECT CALIFORNIA",
+    subtitle: "VILLA",
+    image: `${HOUSE_PATH}/VILLA DESIGN PROJECT CALIFORNIA.webp`,
   }
 ];
 
