@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 
 import Hero1 from "../../../../public/logos/hero-section-1.webp";
-import Hero2 from "../../../../public/logos/hero-section-2.jpeg";
+import Hero2 from "../../../../public/logos/hero-section-2.webp";
 import Hero3 from "../../../../public/logos/hero-section-3.webp";
 import Hero4 from "../../../../public/logos/hero-section-4.webp";
 

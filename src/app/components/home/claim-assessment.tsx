@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import ClaimImage from "../../../../public/logos/claim-assessment.webp";
 import PhoneIcon from "../../../../public/logos/phone.svg";
-import FarazImage from "../../../../public/logos/faraz.jpeg";
+import FarazImage from "../../../../public/logos/faraz.webp";
 
 export default function ClaimAssessment() {
   const router = useRouter();
