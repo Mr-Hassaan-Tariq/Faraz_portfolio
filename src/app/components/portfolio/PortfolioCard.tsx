@@ -5,8 +5,20 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({ item }: PortfolioCardProps) {
+  const CardWrapper = item.link ? "a" : "div";
+  const wrapperProps = item.link
+    ? {
+        href: item.link,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "relative group overflow-hidden w-full sm:w-[500px] h-[500px] rounded-lg mb-16 cursor-pointer block",
+      }
+    : {
+        className: "relative group overflow-hidden w-full sm:w-[500px] h-[500px] rounded-lg mb-16",
+      };
+
   return (
-    <div className="relative group overflow-hidden w-full sm:w-[500px] h-[500px] rounded-lg mb-16">
+    <CardWrapper {...wrapperProps}>
       {/* Portfolio Image */}
       <img
         src={item.image}
@@ -20,7 +32,7 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
 
       {/* Content */}
       <CardContent title={item.title} subtitle={item.subtitle} />
-    </div>
+    </CardWrapper>
   );
 }
 
