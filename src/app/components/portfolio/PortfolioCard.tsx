@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PortfolioItem } from "./data/portfolio-data";
 
 interface PortfolioCardProps {
@@ -20,11 +21,14 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
   return (
     <CardWrapper {...wrapperProps}>
       {/* Portfolio Image */}
-      <img
+      <Image
         src={item.image}
         alt={item.title}
-        className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+        fill
+        sizes="(max-width: 640px) 100vw, 500px"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
+        quality={80}
       />
 
       {/* Overlay */}
