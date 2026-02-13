@@ -37,13 +37,210 @@ const SHOPS_PATH = "/logos/shops";
 const PORTFOLIO_PATH = "/logos";
 
 // ===========================================
+// UTILITY FUNCTIONS
+// ===========================================
+
+export function filterPortfolioItems(
+  items: PortfolioItem[],
+  category: string
+): PortfolioItem[] {
+  if (category === "All") {
+    return items;
+  }
+  return items.filter((item) => item.category === category);
+}
+
+// ===========================================
 // PORTFOLIO DATA
 // ===========================================
 
 export const portfolioItems: PortfolioItem[] = [
-  // Apartments
+  // Reordered based on user's sequence
+  // 1. Studio apartment - Not found in original data, skipping
+
   {
     id: 1,
+    category: "Apartments",
+    title: "STUDIO APARTMENT ELEVATION",
+    subtitle: "APARTMENTS DESIGN",
+    image: `${APARTMENTS_PATH}/STUDIO APARTMENT ELEVATION.webp`,
+    link: "https://www.behance.net/gallery/244062347/STUDIO-APARTMENT-ELEVATION",
+  },
+  // 2. Remains same - Not clear which item this refers to, skipping
+
+  // 3. 8 marla complete interior
+  {
+    id: 1,
+    category: "Houses",
+    title: "8 MARLA COMPLETE INTERIOR PROJECT BAHRIA TOWN",
+    subtitle: "COMPLETE INTERIOR PROJECT",
+    image: `${HOUSES_PATH}/8 marla complete interior project bahria town.webp`,
+    link: "https://www.behance.net/gallery/200248971/8-marla-complete-interior-project-bahria-town",
+  },
+
+  // 4. Don't eat the homies - Not found in original data, skipping
+  {
+    id: 2,
+    category: "Restaurants",
+    title: "DON'T EAT THE HOMIES RESTAURANT",
+    subtitle: "RESTAURANTS DESIGN",
+    image: `${RESTAURANTS_PATH}/DON'T EAT THE HOMIES RESTAURANT.webp`,
+    link: "https://www.behance.net/gallery/244062959/DONT-EAT-THE-HOMIES",
+  },
+  // 5. Chicago street
+  {
+    id: 2,
+    category: "Restaurants",
+    title: "CHICAGO STREET RESTAURANT, DHA PHASE-6",
+    subtitle: "RESTAURANTS DESIGN",
+    image: `${RESTAURANTS_PATH}/chicago-street-restaurant-dha-phase-6.webp`,
+    link: "https://www.behance.net/gallery/241158953/CHICAGO-STREET-RESTAURANT",
+  },
+
+  // 6. Arabian delights
+  {
+    id: 3,
+    category: "Restaurants",
+    title: "ARABIAN DELIGHTS",
+    subtitle: "RESTAURANTS DESIGN",
+    image: `${RESTAURANTS_PATH}/arabian-delights.webp`,
+    link: "https://www.behance.net/gallery/243458371/ARABIAN-DELIGHTS",
+  },
+
+  // 7. Martin and peggy street
+  {
+    id: 4,
+    category: "Houses",
+    title: "MARTIN AND PEGGY SCOT",
+    subtitle: "MARTIN AND PEGGY SCOT",
+    image: `${HOUSES_PATH}/martin and peggy scot.webp`,
+    link: "https://www.behance.net/gallery/240350137/Martin-and-Peggy-Scott-Elevation",
+  },
+
+  // 8. Noor khan airbase
+  {
+    id: 5,
+    category: "Landscape",
+    title: "NOOR KHAN AIRBASE LANDSCAPE",
+    subtitle: "LANDSCAPE DESIGN",
+    image: `${LANDSCAPE_PATH}/noor-khan-airbase-landscape.webp`,
+    link: "https://www.behance.net/gallery/241159759/NOOR-KHAN-LANDSCAPE",
+  },
+
+  // 9. Paf greenbelt
+  {
+    id: 6,
+    category: "Landscape",
+    title: "PAF GREENBELT LANDSCAPE",
+    subtitle: "LANDSCAPE DESIGN",
+    image: `${LANDSCAPE_PATH}/paf-greenbelt-landscape.webp`,
+    link: "https://www.behance.net/gallery/241159675/PAF-GREENBELT-LANDSCAPE",
+  },
+
+  // 10. It office dubai
+  {
+    id: 7,
+    category: "Offices",
+    title: "IT OFFICE INTERIOR DUBAI",
+    subtitle: "OFFICES DESIGN",
+    image: `${OFFICES_PATH}/it-office-interior-dubai.webp`,
+    link: "https://www.behance.net/gallery/200572619/IT-OFFICE-INTERIOR-DUBAI",
+  },
+
+  // 11. Door showroom dubai
+  {
+    id: 8,
+    category: "Shops",
+    title: "DOORS SHOWROOM INTERIOR DESIGN DUBAI",
+    subtitle: "SHOPS DESIGN",
+    image: `${SHOPS_PATH}/doors-showroom-interior-design-dubai.webp`,
+    link: "https://www.behance.net/gallery/200572133/DOORS-SHOWROOM-INTERIOR-DESIGN-DUBAI",
+  },
+
+  // 12. Oreal tiles showroom ichra
+  {
+    id: 9,
+    category: "Shops",
+    title: "OREAL TILES SHOWROOM ICHHRA LAHORE",
+    subtitle: "SHOPS DESIGN",
+    image: `${SHOPS_PATH}/oreal-tiles-showroom-ichhra-lahore.webp`,
+    link: "https://www.behance.net/gallery/200573049/OREAL-TILES-SHOWROOM-ICHHRA-LAHORE",
+  },
+
+  // 13. Villa housing main entrance
+  {
+    id: 10,
+    category: "Landscape",
+    title: "VILLA HOUSING SOCIETY MAIN ENTRANCE",
+    subtitle: "LANDSCAPE DESIGN",
+    image: `${LANDSCAPE_PATH}/villa-housing-society-main-entrance.webp`,
+    link: "https://www.behance.net/gallery/243461681/SOCIETY-MAIN-ENTRANCE",
+  },
+
+  // 14. 1 kanal house in PUEHS
+  {
+    id: 11,
+    category: "Houses",
+    title: "1 KANAL HOUSE IN PUEHS LAHORE",
+    subtitle: "COMPLETE DESIGN",
+    image: `${HOUSES_PATH}/1 kanal house in PUEHS lahore.webp`,
+    link: "https://www.behance.net/gallery/204167883/1-kanal-interior-design",
+  },
+
+  // 15. 1 kanal corner house
+  {
+    id: 12,
+    category: "Houses",
+    title: "1 KANAL CORNER HOUSE COMPLETE PROJECT, LAKE CITY LAHORE",
+    subtitle: "COMPLETE DESIGN",
+    image: `${HOUSES_PATH}/1KANAL CORNER HOUSE COMPLETE PROJECT, LAKE CITY LAHORE .webp`,
+    link: "https://www.behance.net/gallery/200704613/1KANAL-CORNER-HOUSE-COMPLETE-PROJECT-LAKE-CITY-LAHORE",
+  },
+
+  // 16. 10 marla neoclassic interior
+  {
+    id: 13,
+    category: "Houses",
+    title: "10 MARLA NEO CLASSIC INTERIOR BAHRIA TOWN",
+    subtitle: "NEO CLASSIC INTERIOR",
+    image: `${HOUSES_PATH}/10 marla neo classic interior bahria town.webp`,
+    link: "https://www.behance.net/gallery/238759799/NEO-CLASSIC-INTERIOR",
+  },
+
+  // 17. 1kanal front elevation
+  {
+    id: 14,
+    category: "Houses",
+    title: "1 KANAL FRONT ELEVATION",
+    subtitle: "FRONT ELEVATION",
+    image: `${HOUSES_PATH}/1 KANAL FRONT ELEVATION.webp`,
+    link: "https://www.behance.net/gallery/238578381/1-KANAL-HOUSE-FRONT-ELEVATIO",
+  },
+
+  // 18. Gazeebo design murree
+  {
+    id: 15,
+    category: "Houses",
+    title: "GAZEEBO DESIGN MURREE",
+    subtitle: "GAZEEBO",
+    image: `${HOUSES_PATH}/GAZEEBO DESIGN MURREE.webp`,
+    link: "https://www.behance.net/gallery/238588369/GAZEEBO-DESIGN",
+  },
+
+  // 19. House garden landscape karachi
+  {
+    id: 16,
+    category: "Landscape",
+    title: "HOUSE GARDEN LANDSCAPE. KARACHI BAHRIA TOWN",
+    subtitle: "LANDSCAPE DESIGN",
+    image: `${LANDSCAPE_PATH}/house-garden-landscape-karachi-bahria-town.webp`,
+    link: "https://www.behance.net/gallery/241159517/HOUSE-GARDEN-LANDSCAPE-KARACHI",
+  },
+
+  // Remaining items from original data
+  // Apartments
+  {
+    id: 17,
     category: "Apartments",
     title: "2D RESIDENCE PLAN USA",
     subtitle: "APARTMENTS DESIGN",
@@ -51,7 +248,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200703961/2d-RESIDENCE-PLAN-USA",
   },
   {
-    id: 2,
+    id: 18,
     category: "Apartments",
     title: "APARTMENT HOTEL BUILDING DESIGN DUBAI",
     subtitle: "APARTMENTS DESIGN",
@@ -59,7 +256,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200327633/APARTMENT-HOTEL-BUILDING-DESIGN-DUBAI",
   },
   {
-    id: 3,
+    id: 19,
     category: "Apartments",
     title: "3 BED APARTMENT 3D FLOOR PLAN",
     subtitle: "APARTMENTS DESIGN",
@@ -67,7 +264,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200247807/3-BED-APARTMENT-3D-FLOOR-PLAN",
   },
   {
-    id: 4,
+    id: 20,
     category: "Apartments",
     title: "DUPLEX APARTMENTS",
     subtitle: "APARTMENTS DESIGN",
@@ -75,7 +272,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200513503/DUPLEX-APARTMENTS-DESIGN",
   },
   {
-    id: 5,
+    id: 21,
     category: "Apartments",
     title: "UNIVERSITY HEIGHTS APARTMENTS BUILDING",
     subtitle: "APARTMENTS DESIGN",
@@ -83,7 +280,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200546375/UNIVERSITY-HEIGHTS-APARTMENTS-BUILDING",
   },
   {
-    id: 6,
+    id: 22,
     category: "Apartments",
     title: "ONE BED SUITE FLOOR PLAN",
     subtitle: "APARTMENTS DESIGN",
@@ -93,7 +290,7 @@ export const portfolioItems: PortfolioItem[] = [
 
   // Offices
   {
-    id: 7,
+    id: 23,
     category: "Offices",
     title: "FORMULATRIX OFFICE INTERIOR WAPDA TOWN LAHORE",
     subtitle: "OFFICES DESIGN",
@@ -101,7 +298,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200572285/FORMULATRIX-OFFICE-INTERIOR-WAPDA-TOWN-LAHORE",
   },
   {
-    id: 8,
+    id: 24,
     category: "Offices",
     title: "REDBULL CORPORATE OFFICE INTERIOR DHA PHASE 8 LAHORE",
     subtitle: "OFFICES DESIGN",
@@ -109,7 +306,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200616839/REDBULL-CORPORATE-OFFICE-INTERIOR-DHA-PHASE-8-LAHORE",
   },
   {
-    id: 9,
+    id: 25,
     category: "Offices",
     title: "EXECUTIVE OFFICER INTERIOR DESIGN MULTAN",
     subtitle: "OFFICES DESIGN",
@@ -117,7 +314,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200572207/executive-officer-interior-design-multan",
   },
   {
-    id: 10,
+    id: 26,
     category: "Offices",
     title: "AL GROUP",
     subtitle: "OFFICES DESIGN",
@@ -125,7 +322,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200551131/AL-GROUP",
   },
   {
-    id: 11,
+    id: 27,
     category: "Offices",
     title: "OFFICE INTERIOR DESIGN THOKAR NIAZ BAIG LAHORE",
     subtitle: "OFFICES DESIGN",
@@ -133,7 +330,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200572833/office-interior-design-thokar-niaz-baig-lahore",
   },
   {
-    id: 12,
+    id: 28,
     category: "Offices",
     title: "PROPERTY OFFICE INTERIOR DESIGN RAIWIND",
     subtitle: "OFFICES DESIGN",
@@ -141,15 +338,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200616703/PROPERTY-OFFICE-INTERIOR-design-raiwind",
   },
   {
-    id: 13,
-    category: "Offices",
-    title: "IT OFFICE INTERIOR DUBAI",
-    subtitle: "OFFICES DESIGN",
-    image: `${OFFICES_PATH}/it-office-interior-dubai.webp`,
-    link: "https://www.behance.net/gallery/200572619/IT-OFFICE-INTERIOR-DUBAI",
-  },
-  {
-    id: 14,
+    id: 29,
     category: "Offices",
     title: "ADVOCATE OFFICE DESIGN",
     subtitle: "OFFICES DESIGN",
@@ -157,7 +346,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200512781/ADVOCATE-OFFICE-DESIGN",
   },
   {
-    id: 15,
+    id: 30,
     category: "Offices",
     title: "PROPERTY OFFICE INTERIOR DESIGN LAHORE",
     subtitle: "OFFICES DESIGN",
@@ -167,7 +356,7 @@ export const portfolioItems: PortfolioItem[] = [
 
   // Shops
   {
-    id: 16,
+    id: 31,
     category: "Shops",
     title: "BLAZON SALON JOHAR TOWN LAHORE",
     subtitle: "SHOPS DESIGN",
@@ -175,7 +364,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200328223/BLAZON-SALON-JOHAR-TOWN-LAHORE",
   },
   {
-    id: 17,
+    id: 32,
     category: "Shops",
     title: "COMPUTER SHOP INTERIOR HAFEEZ CENTER LAHORE",
     subtitle: "SHOPS DESIGN",
@@ -183,33 +372,17 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200571987/Computer-shop-interior-Hafeez-center-lahore",
   },
   {
-    id: 18,
+    id: 33,
     category: "Shops",
     title: "COMMERCIAL PLAZA DESIGN PROJECT LAHORE",
     subtitle: "SHOPS DESIGN",
     image: `${SHOPS_PATH}/commercial-plaza-design-project-lahore.webp`,
     link: "https://www.behance.net/gallery/200513083/COMMERCIAL-PLAZA-DESIGN-PROJECT-LAHORE",
   },
-  {
-    id: 19,
-    category: "Shops",
-    title: "DOORS SHOWROOM INTERIOR DESIGN DUBAI",
-    subtitle: "SHOPS DESIGN",
-    image: `${SHOPS_PATH}/doors-showroom-interior-design-dubai.webp`,
-    link: "https://www.behance.net/gallery/200572133/DOORS-SHOWROOM-INTERIOR-DESIGN-DUBAI",
-  },
-  {
-    id: 20,
-    category: "Shops",
-    title: "OREAL TILES SHOWROOM ICHHRA LAHORE",
-    subtitle: "SHOPS DESIGN",
-    image: `${SHOPS_PATH}/oreal-tiles-showroom-ichhra-lahore.webp`,
-    link: "https://www.behance.net/gallery/200573049/OREAL-TILES-SHOWROOM-ICHHRA-LAHORE",
-  },
 
   // Restaurants
   {
-    id: 21,
+    id: 34,
     category: "Restaurants",
     title: "RESTAURANT INTERIIOR DESIGN, UK",
     subtitle: "RESTAURANTS DESIGN",
@@ -217,7 +390,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200616977/RESTAURANT-INTERIIOR-DESIGN-UK",
   },
   {
-    id: 22,
+    id: 35,
     category: "Restaurants",
     title: "RESTAURANT INTERIOR PROJECT UNITED KINGDOM",
     subtitle: "RESTAURANTS DESIGN",
@@ -225,15 +398,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200617123/RESTAURANT-INTERIOR-PROJECT-UNITED-KINGDOM",
   },
   {
-    id: 23,
-    category: "Restaurants",
-    title: "CHICAGO STREET RESTAURANT, DHA PHASE-6",
-    subtitle: "RESTAURANTS DESIGN",
-    image: `${RESTAURANTS_PATH}/chicago-street-restaurant-dha-phase-6.webp`,
-    link: "https://www.behance.net/gallery/241158953/CHICAGO-STREET-RESTAURANT",
-  },
-  {
-    id: 24,
+    id: 36,
     category: "Restaurants",
     title: "PARAGON OUTDOOR CAFE",
     subtitle: "RESTAURANTS DESIGN",
@@ -241,33 +406,17 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/243461537/OUTDOOR-CAFE",
   },
   {
-    id: 25,
+    id: 37,
     category: "Restaurants",
     title: "PIZZARIAN PIZZA RESTAURANT GULBERG LAHORE",
     subtitle: "RESTAURANTS DESIGN",
     image: `${RESTAURANTS_PATH}/pizzarian-pizza-restaurant-gulberg-lahore.webp`,
     link: "https://www.behance.net/gallery/200573165/PIZZARIAN-PIZZA-RESTAURANT-GULBERG-LAHORE",
   },
-  {
-    id: 26,
-    category: "Restaurants",
-    title: "ARABIAN DELIGHTS",
-    subtitle: "RESTAURANTS DESIGN",
-    image: `${RESTAURANTS_PATH}/arabian-delights.webp`,
-    link: "https://www.behance.net/gallery/243458371/ARABIAN-DELIGHTS",
-  },
 
   // Landscape
   {
-    id: 27,
-    category: "Landscape",
-    title: "PAF GREENBELT LANDSCAPE",
-    subtitle: "LANDSCAPE DESIGN",
-    image: `${LANDSCAPE_PATH}/paf-greenbelt-landscape.webp`,
-    link: "https://www.behance.net/gallery/241159675/PAF-GREENBELT-LANDSCAPE",
-  },
-  {
-    id: 28,
+    id: 38,
     category: "Landscape",
     title: "2D LANDSPACE PLANS",
     subtitle: "LANDSCAPE DESIGN",
@@ -275,15 +424,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/201612717/2d-landscape-plans",
   },
   {
-    id: 29,
-    category: "Landscape",
-    title: "VILLA HOUSING SOCIETY MAIN ENTRANCE",
-    subtitle: "LANDSCAPE DESIGN",
-    image: `${LANDSCAPE_PATH}/villa-housing-society-main-entrance.webp`,
-    link: "https://www.behance.net/gallery/243461681/SOCIETY-MAIN-ENTRANCE",
-  },
-  {
-    id: 30,
+    id: 39,
     category: "Landscape",
     title: "FARMHOUSE DESIGN IN KARACHI",
     subtitle: "LANDSCAPE DESIGN",
@@ -291,7 +432,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200544903/FARMHOUSE-DESIGN-IN-KARACHI",
   },
   {
-    id: 31,
+    id: 40,
     category: "Landscape",
     title: "OUTDOOR PARK LANDSCAPE DESIGN FOR SCHOOL",
     subtitle: "LANDSCAPE DESIGN",
@@ -299,7 +440,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200545983/OUTDOOR-PARK-LANDSCAPE-DESIGN-FOR-SCHOOL",
   },
   {
-    id: 32,
+    id: 41,
     category: "Landscape",
     title: "1 KANAL LAWN AREA DESIGN",
     subtitle: "LANDSCAPE DESIGN",
@@ -307,23 +448,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200703765/1-KANAL-LAWN-AREA-DESIGN",
   },
   {
-    id: 33,
-    category: "Landscape",
-    title: "HOUSE GARDEN LANDSCAPE. KARACHI BAHRIA TOWN",
-    subtitle: "LANDSCAPE DESIGN",
-    image: `${LANDSCAPE_PATH}/house-garden-landscape-karachi-bahria-town.webp`,
-    link: "https://www.behance.net/gallery/241159517/HOUSE-GARDEN-LANDSCAPE-KARACHI",
-  },
-  {
-    id: 34,
-    category: "Landscape",
-    title: "NOOR KHAN AIRBASE LANDSCAPE",
-    subtitle: "LANDSCAPE DESIGN",
-    image: `${LANDSCAPE_PATH}/noor-khan-airbase-landscape.webp`,
-    link: "https://www.behance.net/gallery/241159759/NOOR-KHAN-LANDSCAPE",
-  },
-  {
-    id: 35,
+    id: 42,
     category: "Landscape",
     title: "DAYCARE PARK LANDSCAPE DESIGN KASUR",
     subtitle: "LANDSCAPE DESIGN",
@@ -333,14 +458,14 @@ export const portfolioItems: PortfolioItem[] = [
 
   // Houses
   {
-    id: 36,
+    id: 43,
     category: "Houses",
     title: "NASHEMAN E IQBAL SOCIETY",
     subtitle: "ENTRANCE DESIGN",
     image: `${PORTFOLIO_PATH}/portfolio-5.webp`,
   },
   {
-    id: 37,
+    id: 44,
     category: "Houses",
     title: "1 KANAL COMPLETE DESIGN SHEIKHUPURA",
     subtitle: "COMPLETE DESIGN",
@@ -348,7 +473,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200063495/1-KANAL-COMPLETE-DESIGN-SHEIKHUPURA",
   },
   {
-    id: 38,
+    id: 45,
     category: "Houses",
     title: "1 KANAL CORNER DHA PHASE 6 LAHORE",
     subtitle: "CORNER DESIGN",
@@ -356,7 +481,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200063569/1-KANAL-CORNER-DHA-PHASE-6-LAHORE",
   },
   {
-    id: 39,
+    id: 46,
     category: "Houses",
     title: "1 KANAL EXTERIOR DESIGN CORNER HOUSE PESHAWAR",
     subtitle: "EXTERIOR DESIGN",
@@ -364,15 +489,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200246835/1KANAL-EXTERIOR-DESIGN-CORNER-HOUSE-PESHAWAR",
   },
   {
-    id: 40,
-    category: "Houses",
-    title: "1 KANAL CORNER HOUSE COMPLETE PROJECT, LAKE CITY LAHORE",
-    subtitle: "COMPLETE DESIGN",
-    image: `${HOUSES_PATH}/1KANAL CORNER HOUSE COMPLETE PROJECT, LAKE CITY LAHORE .webp`,
-    link: "https://www.behance.net/gallery/200704613/1KANAL-CORNER-HOUSE-COMPLETE-PROJECT-LAKE-CITY-LAHORE",
-  },
-  {
-    id: 41,
+    id: 47,
     category: "Houses",
     title: "1 KANAL EXTERIOR DESIGN FAZAIYA HOUSING SCHEME LAHORE",
     subtitle: "EXTERIOR DESIGN",
@@ -380,15 +497,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/199878009/1-KANAL-EXTERIOR-DESIGN-FAZAIYA-HOUSING-SCHEME-LAHORE",
   },
   {
-    id: 42,
-    category: "Houses",
-    title: "1 KANAL HOUSE IN PUEHS LAHORE",
-    subtitle: "COMPLETE DESIGN",
-    image: `${HOUSES_PATH}/1 kanal house in PUEHS lahore.webp`,
-    link: "https://www.behance.net/gallery/204167883/1-kanal-interior-design",
-  },
-  {
-    id: 43,
+    id: 48,
     category: "Houses",
     title: "1 KANAL INTERIOR DESIGN KARACHI",
     subtitle: "INTERIOR DESIGN",
@@ -396,7 +505,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200617751/1-kanal-interior-design-karachi",
   },
   {
-    id: 44,
+    id: 49,
     category: "Houses",
     title: "1 KANAL INTERIOR PROJECT BAHRIA TOWN LAHORE",
     subtitle: "INTERIOR PROJECT",
@@ -404,7 +513,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200691741/1-kanal-interior-project-bahria-town-lahore",
   },
   {
-    id: 45,
+    id: 50,
     category: "Houses",
     title: "1 KANAL INTERIOR PROJECT HYDERABAD",
     subtitle: "INTERIOR PROJECT",
@@ -412,7 +521,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200691897/1-kanal-interior-project-hyderabad",
   },
   {
-    id: 46,
+    id: 51,
     category: "Houses",
     title: "3 MARLA FRONT ELEVATION LAHORE",
     subtitle: "FRONT ELEVATION",
@@ -420,7 +529,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200247921/3-MARLA-FRONT-ELEVATION-LAHORE",
   },
   {
-    id: 47,
+    id: 52,
     category: "Houses",
     title: "2D RESIDENCE PLAN USA",
     subtitle: "RESIDENCE PLAN",
@@ -428,7 +537,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200703961/2d-RESIDENCE-PLAN-USA",
   },
   {
-    id: 48,
+    id: 53,
     category: "Houses",
     title: "5 MARLA COMPLETE ARCHITECTURAL DESIGN FAISALABAD",
     subtitle: "COMPLETE ARCHITECTURAL DESIGN",
@@ -436,7 +545,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200248099/5-MARLA-COMPLETE-ARCHITECTURAL-DESIGN-FAISALABAD",
   },
   {
-    id: 49,
+    id: 54,
     category: "Houses",
     title: "5 MARLA COMPLETE DESIGN PROJECT AL-HAFEEZ GARDENS PHASE 2 LAHORE",
     subtitle: "COMPLETE DESIGN",
@@ -444,7 +553,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200248325/5-MARLA-DESIGN-PROJECT-AL-HAFEEZ-GARDENS-PHASE-2-LAHORE",
   },
   {
-    id: 50,
+    id: 55,
     category: "Houses",
     title: "5 MARLA CORNER RESIDENCE DESIGN TAJBAGH LAHORE",
     subtitle: "CORNER RESIDENCE DESIGN",
@@ -452,7 +561,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200248499/5-MARLA-CORNER-RESIDENCE-DESIGN-TAJBAGH-LAHORE",
   },
   {
-    id: 51,
+    id: 56,
     category: "Houses",
     title: "5 MARLA FRONT ELEVATION LAKE CITY LAHORE",
     subtitle: "FRONT ELEVATION",
@@ -460,15 +569,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200248807/5-MARLA-FRONT-ELEVATION-LAKE-CITY-LAHORE",
   },
   {
-    id: 52,
-    category: "Houses",
-    title: "8 MARLA COMPLETE INTERIOR PROJECT BAHRIA TOWN",
-    subtitle: "COMPLETE INTERIOR PROJECT",
-    image: `${HOUSES_PATH}/8 marla complete interior project bahria town.webp`,
-    link: "https://www.behance.net/gallery/200248971/8-marla-complete-interior-project-bahria-town",
-  },
-  {
-    id: 53,
+    id: 57,
     category: "Houses",
     title: "10 MARLA DESIGN TOWNSHIP LAHORE",
     subtitle: "DESIGNSIGN FRONT ELEVATION",
@@ -476,7 +577,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200323389/10-MARLA-DESIGN-TOWNSHIP-LAHORE",
   },
   {
-    id: 54,
+    id: 58,
     category: "Houses",
     title: "10 MARLA CLASSIC HOUSE GUJRAWALA",
     subtitle: "CLASSIC HOUSE",
@@ -484,7 +585,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/238589153/classic-front-elevation",
   },
   {
-    id: 55,
+    id: 59,
     category: "Houses",
     title: "10 MARLA INTERIOR DESIGN LAHORE",
     subtitle: "INTERIOR DESIGN",
@@ -492,15 +593,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200701691/10-marla-interior-design-lahore",
   },
   {
-    id: 56,
-    category: "Houses",
-    title: "10 MARLA NEO CLASSIC INTERIOR BAHRIA TOWN",
-    subtitle: "NEO CLASSIC INTERIOR",
-    image: `${HOUSES_PATH}/10 marla neo classic interior bahria town.webp`,
-    link: "https://www.behance.net/gallery/238759799/NEO-CLASSIC-INTERIOR",
-  },
-  {
-    id: 57,
+    id: 60,
     category: "Houses",
     title: "12 MARLA INTERIOR DESIGN JOHAR TOWN LAHORE",
     subtitle: "INTERIOR DESIGN",
@@ -508,7 +601,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200702191/12-marla-interior-design-johar-town-lahore",
   },
   {
-    id: 58,
+    id: 61,
     category: "Houses",
     title: "15 MARLA HOUSE ELEVATION DESIGN KASHMIR",
     subtitle: "ELEVATION DESIGN",
@@ -516,7 +609,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200323815/15-marla-house-elevation-design-kashmir",
   },
   {
-    id: 59,
+    id: 62,
     category: "Houses",
     title: "BEDROOM INTERIOR DESIGN BISMAILAH HOUSING SCHEME LAHORE",
     subtitle: "BEDROOM INTERIOR DESIGN",
@@ -524,7 +617,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200702909/bedroom-interior-design-Bismillah-housing-scheme-lahore",
   },
   {
-    id: 60,
+    id: 63,
     category: "Houses",
     title: "ELEVATION DESIGN OF RESIDENCE IN BATAL KASHMIR",
     subtitle: "ELEVATION DESIGN",
@@ -532,7 +625,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200544635/ELEVATION-DESIGN-OF-RESIDENCE-IN-BATAL-KASHMIR",
   },
   {
-    id: 61,
+    id: 64,
     category: "Houses",
     title: "FARMHOUSE KARACHI",
     subtitle: "FARMHOUSE",
@@ -540,23 +633,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200544903/FARMHOUSE-DESIGN-IN-KARACHI",
   },
   {
-    id: 62,
-    category: "Houses",
-    title: "GAZEEBO DESIGN MURREE",
-    subtitle: "GAZEEBO",
-    image: `${HOUSES_PATH}/GAZEEBO DESIGN MURREE.webp`,
-    link: "https://www.behance.net/gallery/238588369/GAZEEBO-DESIGN",
-  },
-  {
-    id: 63,
-    category: "Houses",
-    title: "MARTIN AND PEGGY SCOT",
-    subtitle: "MARTIN AND PEGGY SCOT",
-    image: `${HOUSES_PATH}/martin and peggy scot.webp`,
-    link: "https://www.behance.net/gallery/240350137/Martin-and-Peggy-Scott-Elevation",
-  },
-  {
-    id: 64,
+    id: 65,
     category: "Houses",
     title: "VILLA DESIGN PROJECT CALIFORNIA",
     subtitle: "VILLA",
@@ -564,20 +641,12 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200546523/VILLA-DESIGN-PROJECT-CALIFORNIA",
   },
   {
-    id: 65,
+    id: 66,
     category: "Houses",
     title: "1 KANAL FRONT ELEVATION RENOVATION WAPDA TOWN LAHORE",
     subtitle: "FRONT ELEVATION RENOVATION",
     image: `${HOUSES_PATH}/1 KANAL FRONT ELEVATION RENOVATION WAPDA TOWN LAHORE.webp`,
     link: "https://www.behance.net/gallery/200546781/1-KANAL-FRONT-ELEVATION-RENOVATION-WAPDA-TOWN-LAHORE",
-  },
-  {
-    id: 66,
-    category: "Houses",
-    title: "1 KANAL FRONT ELEVATION",
-    subtitle: "FRONT ELEVATION",
-    image: `${HOUSES_PATH}/1 KANAL FRONT ELEVATION.webp`,
-    link: "https://www.behance.net/gallery/238578381/1-KANAL-HOUSE-FRONT-ELEVATIO",
   },
   {
     id: 67,
@@ -716,49 +785,3 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://www.behance.net/gallery/200550921/VILLA-PROJECT-USA",
   },
 ];
-
-// ===========================================
-// HELPER FUNCTIONS
-// ===========================================
-
-/**
- * Filter portfolio items by category
- */
-export function filterPortfolioItems(
-  items: PortfolioItem[],
-  category: string
-): PortfolioItem[] {
-  if (category === "All") return items;
-  return items.filter((item) => item.category === category);
-}
-
-/**
- * Get items by category
- */
-export function getItemsByCategory(category: Category): PortfolioItem[] {
-  return portfolioItems.filter((item) => item.category === category);
-}
-
-/**
- * Get all unique categories that have items
- */
-export function getActiveCategories(): Category[] {
-  const activeCategories = new Set(portfolioItems.map((item) => item.category));
-  return categories.filter(
-    (cat) => cat === "All" || activeCategories.has(cat)
-  ) as Category[];
-}
-
-/**
- * Get item by ID
- */
-export function getItemById(id: number): PortfolioItem | undefined {
-  return portfolioItems.find((item) => item.id === id);
-}
-
-/**
- * Get next available ID for new items
- */
-export function getNextId(): number {
-  return Math.max(...portfolioItems.map((item) => item.id)) + 1;
-}
