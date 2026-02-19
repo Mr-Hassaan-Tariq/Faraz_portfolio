@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DiamondIcon from "../../../../public/logos/diamond.svg";
 import WorkImage from "../../../../public/logos/portfolio-1.webp";
+import { portfolioItems } from "../portfolio/data/portfolio-data";
 
 export default function OurWorks() {
   const router = useRouter();
@@ -29,32 +30,51 @@ export default function OurWorks() {
 
         <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 cursor-pointer"
-          onClick={() => router.push("/portfolio")}
+          // onClick={() => router.push("/portfolio")}
         >
-          {[1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="relative group overflow-hidden rounded-lg shadow-md"
-            >
-              <Image
-                src={WorkImage}
-                alt="3 Bed Apartment"
-                width={500}
-                height={400}
-                className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
-                <h3 className="text-white text-xl font-bold">
-                  3 BED APARTMENT
-                </h3>
-                <p className="text-white text-[18px]">3D FLOOR PLAN</p>
-                <p className="mt-2 text-[10px] text-white">
-                  DISCOVER THIS PROJECT
-                </p>
+          {portfolioItems
+            .filter((item) =>
+              [
+                "STUDIO APARTMENT ELEVATION",
+                "1 KANAL HOUSE IN PUEHS LAHORE",
+                "DON'T EAT THE HOMIES RESTAURANT",
+              ].includes(item.title)
+            )
+            .sort((a, b) => {
+              const order = [
+                "STUDIO APARTMENT ELEVATION",
+                "1 KANAL HOUSE IN PUEHS LAHORE",
+                "DON'T EAT THE HOMIES RESTAURANT",
+              ];
+              return order.indexOf(a.title) - order.indexOf(b.title);
+            })
+            .map((item) => (
+              <div
+                key={item.id}
+                className="relative group overflow-hidden rounded-lg shadow-md"
+                onClick={() => item.link && window.open(item.link, "_blank")}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={500}
+                  height={400}
+                  className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-end p-6">
+                  <h3 className="text-white text-xl font-bold uppercase">
+                    {item.title}
+                  </h3>
+                  <p className="text-white text-[18px] uppercase">
+                    {item.subtitle}
+                  </p>
+                  <p className="mt-2 text-[10px] text-white">
+                    DISCOVER THIS PROJECT
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
