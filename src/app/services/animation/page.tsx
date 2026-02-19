@@ -3,6 +3,7 @@ import DesignProcess from "@/app/components/services/design-process";
 import Companies from "@/app/components/services/companies";
 import OurWorks from "@/app/components/home/our-works";
 import Contact from "@/app/components/home/contact";
+import AnimationGallery from "@/app/components/services/animation-gallery";
 
 import AnimationImage from "../../../../public/logos/animation-hero.webp";
 import AnimationServiceImage from "../../../../public/logos/animation-service.webp";
@@ -13,6 +14,22 @@ import DesignProcess2 from "../../../../public/logos/animation-design-process-2.
 import DesignProcess3 from "../../../../public/logos/animation-design-process-3.webp";
 import DesignProcess4 from "../../../../public/logos/animation-design-process-4.webp";
 import DesignProcess5 from "../../../../public/logos/animation-design-process-5.webp";
+
+interface AnimationVideo {
+  id: number;
+  title: string;
+  description: string;
+  videoPath: string;
+}
+const animationVideos: AnimationVideo[] = [
+  // {
+  //   id: 1,
+  //   title: "Ground Floor Architectural Walkthrough",
+  //   description: "Detailed 3D animation showcasing the ground floor layout, design elements, and spatial flow.",
+  //   videoPath: "/video/animations/ground floor.mp4",
+  // },
+  // Add more videos here as needed
+];
 
 export default function AnimationDesign() {
   return (
@@ -26,7 +43,7 @@ export default function AnimationDesign() {
       <ServiceOverview
         title="Service Overview"
         subtitle="Visualizing Designs With Precision & Detail"
-        description="Animation transforms static designs into dynamic experiences. By simulating movement, light, and user interaction, animations allow you and your stakeholders to explore a project before it’s built. These visual stories help communicate design intent more effectively and leave a stronger impact."
+        description="Animation transforms static designs into dynamic experiences. By simulating movement, light, and user interaction, animations allow you and your stakeholders to explore a project before it's built. These visual stories help communicate design intent more effectively and leave a stronger impact."
         listItems={[
           "Architectural walkthrough animations",
           "Interior flythroughs",
@@ -37,6 +54,9 @@ export default function AnimationDesign() {
         image={AnimationServiceImage}
         buttonText="Start Your Project"
       />
+
+      {/* Animation Video Gallery */}
+      {/* <AnimationGallery videos={animationVideos} /> */}
 
       <DesignProcess
         sectionTitle="My Design Process"

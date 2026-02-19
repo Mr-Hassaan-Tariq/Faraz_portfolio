@@ -10,11 +10,8 @@ export {
   categories,
   portfolioItems,
   filterPortfolioItems,
-  getItemsByCategory,
-  getActiveCategories,
-  getItemById,
-  getNextId,
   type Category,
   type PortfolioItem,
 } from "./data/portfolio-data";
+
 
