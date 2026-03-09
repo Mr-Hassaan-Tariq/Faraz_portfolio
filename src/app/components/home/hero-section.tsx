@@ -52,27 +52,35 @@ export default function HeroSection() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {images.map((src, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out transform-gpu ${
-              i === index
-                ? "opacity-100 scale-100 z-10"
-                : "opacity-0 scale-95 z-0"
-            }`}
-            aria-hidden={i !== index}
-          >
-            <Image
-              src={src}
-              alt={`Hero ${i + 1}`}
-              fill
-              className="object-cover object-center"
-              priority={i === 0}
-            />
+        {images.map((src, i) => {
+          const altTexts = [
+            "Modern Architecture Design by Mr Faraz",
+            "Luxury Living Space Interior Concepts",
+            "Sleek and Sustainable Architectural Masterpiece",
+            "Contemporary Interior Design and Visualization",
+          ];
+          return (
+            <div
+              key={i}
+              className={`absolute inset-0 transition-opacity duration-700 ease-out transform-gpu ${
+                i === index
+                  ? "opacity-100 scale-100 z-10"
+                  : "opacity-0 scale-95 z-0"
+              }`}
+              aria-hidden={i !== index}
+            >
+              <Image
+                src={src}
+                alt={altTexts[i]}
+                fill
+                className="object-cover object-center"
+                priority={i === 0}
+              />
             {/* Overlay on image only — make it non-interactive so content sits above */}
             <div className="absolute inset-0 bg-black/40 pointer-events-none" />
-          </div>
-        ))}
+            </div>
+          );
+        })}
       </div>
 
       {/* Content - give it a higher z-index so it's above slides */}

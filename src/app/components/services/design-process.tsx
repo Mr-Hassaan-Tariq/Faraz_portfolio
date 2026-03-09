@@ -31,9 +31,9 @@ export default function DesignProcess({
               {sectionTitle}
             </p>
           </div>
-          <h1 className="mt-1 text-4xl font-[500] text-black leading-tight">
+          <h2 className="mt-1 text-4xl font-[500] text-black leading-tight">
             {heading}
-          </h1>
+          </h2>
         </div>
 
         {steps.map((step, index) => (
@@ -50,9 +50,9 @@ export default function DesignProcess({
               loading="lazy"
             />
             <div className="flex flex-col gap-3 text-center md:text-left">
-              <p className="text-[#A10000] text-[24px] md:text-[30px] font-[500]">
+               <h3 className="text-[#A10000] text-[24px] md:text-[30px] font-[500]">
                 {step.title}
-              </p>
+              </h3>
               <p className="text-[16px] md:text-[18px] text-black font-[400] leading-relaxed">
                 {step.description}
               </p>

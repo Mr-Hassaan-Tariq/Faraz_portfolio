@@ -27,9 +27,9 @@ export default function ClaimAssessment() {
       <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-between px-4 md:px-4 py-16 md:py-20">
         {/* Text Left */}
         <div className="max-w-2xl text-left">
-          <p className="mt-2 text-[32px] font-bold text-white">
+          <h2 className="mt-2 text-[32px] font-bold text-white">
             Claim Your Free Design <br /> Assessment
-          </p>
+          </h2>
 
           <p className="mt-2 text-[18px] text-[#E3EBF5]">
             Sign up now for a complimentary design assessment and let us help

@@ -44,7 +44,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           <Image
             src={MainLogo}
-            alt="Logo"
+            alt="Mr Faraz - Architecture & Interior Design"
             className="h-[40px] w-auto md:h-[80px]"
             loading="lazy"
           />

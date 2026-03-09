@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Interior Design",
+  description: "Professional interior design services for residential and commercial spaces. Designing interiors that define your lifestyle.",
+};
+
 import HeroSection from "@/app/components/services/hero-section";
 import ServiceOverview from "@/app/components/services/services-overview";
 import DesignProcess from "@/app/components/services/design-process";

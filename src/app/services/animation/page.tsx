@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Animation Services",
+  description: "Breathtaking architectural animations and walkthroughs. Bringing your designs to life with dynamic motion.",
+};
+
 import HeroSection from "@/app/components/services/hero-section";
 import DesignProcess from "@/app/components/services/design-process";
 import Companies from "@/app/components/services/companies";

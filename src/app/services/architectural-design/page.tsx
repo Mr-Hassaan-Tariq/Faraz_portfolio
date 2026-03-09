@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Architectural Design",
+  description: "Innovative architectural design services. Designing structures that inspire and endure, from residential homes to commercial developments.",
+};
+
 import HeroSection from "@/app/components/services/hero-section";
 import DesignProcess from "@/app/components/services/design-process";
 import Companies from "@/app/components/services/companies";

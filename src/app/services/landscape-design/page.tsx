@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Landscape Design",
+  description: "Expert landscape design services. Creating functional and aesthetic outdoor environments that inspire.",
+};
+
 import HeroSection from "@/app/components/services/hero-section";
 import ServiceOverview from "@/app/components/services/services-overview";
 import DesignProcess from "@/app/components/services/design-process";

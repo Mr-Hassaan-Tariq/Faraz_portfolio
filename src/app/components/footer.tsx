@@ -25,17 +25,13 @@ const socialLinks = {
 };
 
 export default function Footer() {
-  const handleSocialClick = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section className="w-full bg-[#F9F9FB]">
       <div className="mx-auto max-w-7xl px-4 md:px-4 py-16 md:py-10 flex flex-col justify-center items-center">
         <Link href="/" className="flex items-center">
           <Image
             src={MainLogo}
-            alt="Logo"
+            alt="Mr Faraz - Architecture & Interior Design"
             loading="lazy"
             className="h-[40px] w-auto md:h-[180px]"
           />
@@ -57,34 +53,58 @@ export default function Footer() {
         </nav>
 
         <div className="flex mt-6 gap-6">
-          <Image
-            src={FacebookIcon}
-            alt="facebook"
-            className="h-[40px] w-auto cursor-pointer"
-            onClick={() => handleSocialClick(socialLinks.facebook)}
-            loading="lazy"
-          />
-          <Image
-            src={InstagramIcon}
-            alt="instagram"
-            className="h-[40px] w-auto cursor-pointer"
-            onClick={() => handleSocialClick(socialLinks.instagram)}
-            loading="lazy"
-          />
-          <Image
-            src={TwitterIcon}
-            alt="twitter"
-            className="h-[40px] w-auto cursor-pointer"
-            onClick={() => handleSocialClick(socialLinks.twitter)}
-            loading="lazy"
-          />
-          <Image
-            src={LinkedinIcon}
-            alt="linkedin"
-            className="h-[40px] w-auto cursor-pointer"
-            onClick={() => handleSocialClick(socialLinks.linkedin)}
-            loading="lazy"
-          />
+          <a
+            href={socialLinks.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Image
+              src={FacebookIcon}
+              alt="Facebook"
+              className="h-[40px] w-auto cursor-pointer"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href={socialLinks.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Image
+              src={InstagramIcon}
+              alt="Instagram"
+              className="h-[40px] w-auto cursor-pointer"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href={socialLinks.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <Image
+              src={TwitterIcon}
+              alt="Twitter"
+              className="h-[40px] w-auto cursor-pointer"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href={socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Image
+              src={LinkedinIcon}
+              alt="LinkedIn"
+              className="h-[40px] w-auto cursor-pointer"
+              loading="lazy"
+            />
+          </a>
         </div>
 
         <div className="flex gap-1 mt-12 w-full border-t border-[#D6D6D6] pt-6 justify-center items-center">

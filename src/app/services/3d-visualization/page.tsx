@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "3D Visualization & Rendering",
+  description: "High-quality 3D visualization and rendering services. Turning your architectural ideas into photorealistic visuals.",
+};
+
 import HeroSection from "@/app/components/services/hero-section";
 import DesignProcess from "@/app/components/services/design-process";
 import Companies from "@/app/components/services/companies";

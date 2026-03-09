@@ -35,9 +35,9 @@ export default function ServiceOverview({
               </p>
             </div>
 
-            <h1 className="mt-1 text-4xl font-bold text-black leading-tight">
+            <h2 className="mt-1 text-4xl font-[500] text-black leading-tight">
               {subtitle}
-            </h1>
+            </h2>
 
             <p className="mt-3 text-black">{description}</p>
 
