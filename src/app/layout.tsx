@@ -13,6 +13,7 @@ const leagueSpartan = League_Spartan({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.aefaraz.com/"),
   title: {
     default: "Mr Faraz | Architecture & Interior Design",
     template: "%s | Mr Faraz",
@@ -24,13 +25,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://farazportfolio.com",
-    siteName: "Mr Faraz Portfolio",
+    url: "https://www.aefaraz.com/",
+    siteName: "Mr Faraz | Architecture & Interior Design",
     title: "Mr Faraz | Architecture & Interior Design",
     description: "Crafting Dreams into Spaces. Professional architectural and interior design services.",
     images: [
       {
-        url: "/logos/hero-section-1.webp",
+        url: "https://www.aefaraz.com/logos/hero-section-1.webp",
         width: 1200,
         height: 630,
         alt: "Mr Faraz Architecture & Interior Design Portfolio",
@@ -41,11 +42,19 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mr Faraz | Architecture & Interior Design",
     description: "Crafting Dreams into Spaces. Professional architectural and interior design services.",
-    images: ["/logos/hero-section-1.webp"],
+    images: ["https://www.aefaraz.com/logos/hero-section-1.webp"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logos/Logo.svg",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  formatDetection: {
+    telephone: false,
   },
 };
 
